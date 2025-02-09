@@ -89,7 +89,7 @@ const ImageSlider = () => {
           left: "5%",
           zIndex: 10,
           display: "flex",
-          gap: "1px",
+          width : "50%",
         }}
       ></div>
     </div>

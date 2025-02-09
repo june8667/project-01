@@ -82,24 +82,26 @@
 
 /* 화면 너비가 767px 이하일 때 텍스트 크기 줄이기 */
 @media (max-width: 767px) {
+
+  .custom-pagination .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
+
   .text-overlay {
     font-size: 64px; /* 작은 화면에서는 텍스트 크기를 고정 */
   }
 
   .text-main-1 {
-    font-size: 20px;
+    font-size: 15px;
   }
   
   .text-main-2 {
-    font-size: 60px;
-  }
-  
-  .text-main-3 {
-    font-size: 40px;
+    font-size: 30px;
   }
   
   .text-fix {
-    font-size: 26px;
+    font-size: 15px;
   }
 }
 

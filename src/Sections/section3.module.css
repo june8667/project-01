@@ -13,18 +13,18 @@
   text-align: center;
   color: white;
   position: absolute;
-  height: 400px; /* 기본 높이 설정 */
 }
 
 .item-1 {
   background-color: #0072BB;
-  width: 50%; /* Item1의 너비는 Item2의 절반 */
   left: 0; /* Item2의 왼쪽 절반에 오버랩되도록 */
   top: 0;
 }
+
 .item-2 {
   background-image: url(/public/images/profile/1.jpg); /* public 폴더 내 이미지 사용 */
 }
+
 
 /* 큰 화면에서 두 div가 오버랩되도록 */
 @media (min-width: 1586px) {
@@ -34,10 +34,12 @@
   }
 
   .item {
+    position: absolute;
     height: 600px; /* 기본 높이 설정 */
   }
 
   .item-1 {
+    width: 50%; /* Item1의 너비는 Item2의 절반 */
     z-index: 2; /* Item1이 Item2 위로 오버랩되도록 설정 */
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%); /* 우변만 기울이기 */
   }
@@ -53,8 +55,7 @@
   .text-bottom {
     display: flex; /* 하단은 Flex로 배치 */
     justify-content: space-between; /* 두 항목을 평행하게 배치 */
-    width: 90%; /* 컨테이너 너비에 맞게 */
-    
+    width: 90%; /* 컨테이너 너비에 맞게 */  
   }
 
   .text-0 {
@@ -107,6 +108,7 @@
   }
 
   .item-1 {
+    width: 50%; /* Item1의 너비는 Item2의 절반 */
     z-index: 2; /* Item1이 Item2 위로 오버랩되도록 설정 */
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%); /* 우변만 기울이기 */
     width: 60%;
@@ -168,7 +170,7 @@
 }
 
 /* 작은 화면에서는 두 div가 세로로 배치 */
-@media (max-width: 1248px) {
+@media (min-width: 768px) and (max-width: 1248px) {
   .container {
       display: flex;
       flex-direction: column; /* 세로 정렬 */
@@ -227,5 +229,71 @@
     padding-right: 5%;
     color: white;
     font-size: 20px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .container {
+      display: flex;
+      flex-direction: column; /* 세로 정렬 */
+      align-items: center; /* 가로 중앙 정렬 */
+      justify-content: center; /* 세로 중앙 정렬 (필요할 경우) */
+  }
+
+  .item {
+    position: relative;
+    text-align: center;
+    color: white;
+    width : 100%;
+    
+  }
+
+  .item-2 {
+    background-size: cover; /* 이미지가 div를 가득 채우도록 */
+    background-position: center; /* 이미지를 div의 중앙에 배치 */
+    background-repeat: no-repeat; /* 이미지를 반복하지 않도록 */
+    height : 70vw;
+    left: 0;
+    top: 0;
+  }
+
+  .text-0 {
+    text-align: right;
+    padding-right: 5%;
+    color: white;
+  }
+
+  .text-1 {
+    text-align: right;
+    color: white;
+    font-family: 'thefaceshop_inklipquid';
+    font-size: 35px;
+    letter-spacing: 10px;
+  }
+
+  .text-2 {
+    text-align: right;
+    line-height: 2;
+    padding-right: 5%;
+    color: white;
+    font-size: 15px;
+  }
+
+  .text-3 {
+    text-align: right;
+    line-height: 2;
+    padding-right: 5%;
+    color: white;
+    font-size: 12px;
+  }
+
+  .text-4 {
+    text-align: right;
+    line-height: 2;
+    padding-right: 5%;
+    color: white;
+    font-size: 12px;
   }
 }

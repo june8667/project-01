@@ -1,26 +1,29 @@
 // src/App.js
-import React from 'react';
-import NavigationBar from './components/NavigationBar.js';
+import React from "react";
+import NavigationBar from "./components/NavigationBar.js";
+import ImageSlider from "./components/ImageSlider.js";
+import Seciont1 from "./Sections/section1.js";
+import Seciont2 from "./Sections/section2.js";
+import Seciont3 from "./Sections/section3.js";
+import Seciont4 from "./Sections/section4.js";
+import Seciont5 from "./Sections/section5.js";
+
 
 const App = () => {
   return (
     <div>
-      <NavigationBar />
-      <div id="section1" style={{ height: '100vh', backgroundColor: '#f1f1f1', padding: '20px' }}>
-        <h2>섹션 1</h2>
-        <p>이곳은 섹션 1입니다.</p>
+      {/* <NavigationBar /> */}
+      <div id="section1" className="section">
+        <Seciont1></Seciont1>
       </div>
-      <div id="section2" style={{ height: '100vh', backgroundColor: '#e1e1e1', padding: '20px' }}>
-        <h2>섹션 2</h2>
-        <p>이곳은 섹션 2입니다.</p>
+      <div id="section2" className="section">
+        <Seciont2></Seciont2>
       </div>
-      <div id="section3" style={{ height: '100vh', backgroundColor: '#d1d1d1', padding: '20px' }}>
-        <h2>섹션 3</h2>
-        <p>이곳은 섹션 3입니다.</p>
+      <div id="section3" className="section">
+        <Seciont3></Seciont3>
       </div>
-      <div id="section4" style={{ height: '100vh', backgroundColor: '#c1c1c1', padding: '20px' }}>
-        <h2>섹션 4</h2>
-        <p>이곳은 섹션 4입니다.</p>
+      <div id="section4" className="section">
+        <Seciont4></Seciont4>
       </div>
     </div>
   );

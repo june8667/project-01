@@ -1,0 +1,56 @@
+/* section2.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  padding: 0px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column; /* 세로로 배치 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  padding-top: 5%;
+  text-align: center;
+  color: white;
+  height : 560px
+}
+
+.item-1 { background-color: #ECF4FA; }
+.item-2 { background-color: #F6FCFF; }
+.item-3 { background-color: #ECF4FA; }
+.item-4 { background-color: #F6FCFF; }
+.item-5 { background-color: #ECF4FA; }
+.item-6 { background-color: #F6FCFF; }
+.item-7 { background-color: #ECF4FA; }
+.item-8 { background-color: #F6FCFF; }
+
+.text-small {
+  font-size: 22px;
+  color: black;
+}
+
+.text-mid {
+  font-size: 32px;
+  color: black;
+  font-weight: 1000;
+}
+
+.image {
+  transform: scale(1.5);
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

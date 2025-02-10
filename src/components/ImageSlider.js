@@ -37,16 +37,6 @@ const ImageSlider = () => {
           position: "relative",
         }}
       >
-        {/* <div className="text-overlay">
-          <div className="text-position">
-            <p className="text-main-1">나은 사람들이 나은마음으로 진료합니다</p>
-            <p className="text-main-2">
-              SAMSUNG NAUN
-              <br />
-              INTERNAL MEDICINE
-            </p>
-          </div>
-        </div> */}
         {images.map((item, index) => (
           <SwiperSlide
             key={index}
@@ -60,7 +50,7 @@ const ImageSlider = () => {
               src={item.src}
               alt={`slide-${index}`}
               style={{
-                width: "100%",
+                width: "130%",
                 objectFit: "cover",
               }}
             />
@@ -70,7 +60,7 @@ const ImageSlider = () => {
                   나은 사람들이 나은마음으로 진료합니다
                 </p>
                 <p className="text-main-2">
-                  SAMSUNG NAUN
+                  SAMSUNG NAEUN
                   <br />
                   INTERNAL MEDICINE
                 </p>

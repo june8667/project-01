@@ -1,7 +1,7 @@
 // src/App.js
 import React from "react";
+import "./App.css";
 import NavigationBar from "./components/NavigationBar.js";
-import ImageSlider from "./components/ImageSlider.js";
 import Seciont1 from "./Sections/section1.js";
 import Seciont2 from "./Sections/section2.js";
 import Seciont3 from "./Sections/section3.js";
@@ -11,7 +11,7 @@ import Seciont5 from "./Sections/section5.js";
 
 const App = () => {
   return (
-    <div>
+    <div className="total">
       {/* <NavigationBar /> */}
       <div id="section1" className="section">
         <Seciont1></Seciont1>

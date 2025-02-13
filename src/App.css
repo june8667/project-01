@@ -1,26 +1,27 @@
-div {
+/* div {
   border: 1px solid black;
+} */
+
+.total {
+  display: flex;
+  flex-direction: column;
+  width : 100%;
 }
 
 /* section 기본 스타일 */
 .section {
-  padding: 20px;
-  background-color: #f1f1f1;
+  width : 100%;
   transition: height 0.3s ease-in-out;
 }
 
 #section1 {
-  background-color: #f1f1f1;
 }
 
 #section2 {
-  background-color: #e1e1e1;
 }
 
 #section3 {
-  background-color: #d1d1d1;
 }
 
 #section4 {
-  background-color: #c1c1c1;
 }

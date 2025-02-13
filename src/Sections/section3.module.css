@@ -40,7 +40,7 @@
 
   .item-1 {
     width: 50%; /* Item1의 너비는 Item2의 절반 */
-    z-index: 2; /* Item1이 Item2 위로 오버랩되도록 설정 */
+    z-index: 0; /* Item1이 Item2 위로 오버랩되도록 설정 */
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%); /* 우변만 기울이기 */
   }
 
@@ -109,7 +109,7 @@
 
   .item-1 {
     width: 50%; /* Item1의 너비는 Item2의 절반 */
-    z-index: 2; /* Item1이 Item2 위로 오버랩되도록 설정 */
+    z-index: 0; /* Item1이 Item2 위로 오버랩되도록 설정 */
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%); /* 우변만 기울이기 */
     width: 60%;
   }
@@ -191,6 +191,7 @@
     width: 100%; /* Item2는 전체 너비를 차지 */
     left: 0;
     top: 0;
+    z-index: 2; /* Item1이 Item2 위로 오버랩되도록 설정 */
   }
 
   .text-0 {
@@ -257,6 +258,7 @@
     height : 70vw;
     left: 0;
     top: 0;
+    z-index: 0; /* Item1이 Item2 위로 오버랩되도록 설정 */
   }
 
   .text-0 {

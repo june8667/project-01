@@ -8,12 +8,13 @@ import Seciont3 from "./Sections/section3.js";
 import Seciont4 from "./Sections/section4.js";
 import Seciont5 from "./Sections/section5.js";
 import Seciont6 from "./Sections/section6.js";
+import Seciont7 from "./Sections/section7.js";
 
 
 const App = () => {
   return (
     <div className="total">
-      {/* <NavigationBar /> */}
+      <NavigationBar />
       <div id="section1" className="section">
         <Seciont1></Seciont1>
       </div>
@@ -34,6 +35,10 @@ const App = () => {
       {/* 내시경센터 */}
       <div id="section6" className="section">
         <Seciont6></Seciont6>
+      </div>
+      {/* 위내시경/대장내시경 */}
+      <div id="section7" className="section">
+        <Seciont7></Seciont7>
       </div>
     </div>
   );

@@ -1,0 +1,72 @@
+/* ImageSlider.css */
+
+.text-overlay {
+  position: absolute;
+  width: 100%;
+  Height: 100%;
+  top: 15%;
+  left: 0%;
+  z-index: 10;  /* 텍스트가 이미지 위에 표시되도록 설정 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-position {
+  position: absolute;
+  top: 0%;
+  width: 87%;
+  left: 7%;
+}
+.text-desc {
+  color: white;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.text-main {
+  font-weight: bold;
+  color: white;
+}
+
+
+/* 화면 너비가 767px 이하일 때 텍스트 크기 줄이기 */
+@media (max-width: 767px) {
+
+  .text-overlay {
+    font-size: 64px; /* 작은 화면에서는 텍스트 크기를 고정 */
+  }
+
+  .text-desc {
+    font-size: 15px;
+  }
+  
+  .text-main {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1749px)  {
+  
+  .text-desc {
+    font-size: 18px;
+  }
+  
+  .text-main {
+    font-size: 30px;
+  }
+}
+
+/* 화면 너비가 1200px 이상일 때 텍스트 크기 크게 설정 */
+@media (min-width: 1750px) {
+
+  .text-desc {
+    font-size: 18px;
+  }
+  
+  .text-main {
+    font-size: 30px;
+  }
+
+}

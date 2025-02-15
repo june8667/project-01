@@ -25,6 +25,17 @@
   background-image: url(/public/images/profile/1.jpg); /* public 폴더 내 이미지 사용 */
 }
 
+.samsung {
+  position: absolute;
+  background-image: url(/public/images/samsung.png); /* public 폴더 내 이미지 사용 */
+  top: 5%;
+  width : 70vw;
+  height : 30vh;
+  z-index: 2000;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 
 /* 큰 화면에서 두 div가 오버랩되도록 */
 @media (min-width: 1586px) {

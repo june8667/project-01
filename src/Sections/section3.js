@@ -6,6 +6,7 @@ const Section3 = () => {
     <div className={styles["container"]}>
       <div className={`${styles["item"]} ${styles["item-2"]}`}></div>
       <div className={`${styles["item"]} ${styles["item-1"]}`}>
+        <div className={styles["samsung"]}></div>
         <p className={styles["text-0"]}>
           <span className={styles["text-2"]}>대표원장 | 내과전문의</span>
           <span className={styles["text-1"]}>신수린</span>

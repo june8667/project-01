@@ -1,0 +1,156 @@
+div {
+  border: 1px solid black;
+}
+.container {
+  /*background-image: url(/public/images/outview3.png); */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/public/images/section6.jpg');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: grayscale(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 5%;
+}
+
+.parent {
+  display: flex;                /* Flexbox로 배치 */
+  flex-wrap: wrap;               /* 자식 div가 공간을 초과하면 자동으로 줄 바꿈 */
+  gap: 0px;                     /* 자식 div들 간의 간격 */
+  padding : 2%
+}
+
+/* 자식 div */
+.top {
+  text-align: center;           /* 텍스트 중앙 정렬 */
+  width : 100vw;
+}
+
+
+/* 자식 div */
+.child {
+  flex: 26%;                /* 크기 설정: 최소 40%에서 시작해 최대 크기까지 확장 가능 */
+  margin : 0.5%;
+  text-align: center;           /* 텍스트 중앙 정렬 */
+  box-sizing: border-box;       /* padding, border가 전체 크기에 포함되도록 설정 */
+  background-color: white;
+}
+
+.text-number {
+  font-size: 60px;
+  color: #0c78B7;
+  font-weight: 500;
+}
+
+.text-box {
+  font-size: 34px;
+  color: black;
+  font-weight: 1000;
+}
+
+
+.text-small {
+  letter-spacing: 5px;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.text-mid {
+  font-size: 22px;
+  color: gray;
+  margin-bottom: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.text-mid-top {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.text-large {
+  margin-top: 0;
+  font-size: 45px;
+  color: white;
+  font-weight: 1000;
+  margin-bottom: 30px;
+}
+
+
+.text-large2 {
+  font-size: 30px;
+  color: white;
+  font-weight: 1000;
+}
+
+.rounded-box {
+  display: flex; /* 플렉스 박스 적용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+
+  width: 500px;  /* 원하는 크기로 조절 */
+  height: 80px; /* 원하는 높이로 조절 */
+  border: 2px solid rgba(255, 255, 255, 0.4); /* 테두리를 약간만 보이게 */
+}
+
+
+
+@media (max-width: 767px) {
+  .parent {
+    gap: 20px;                     /* 자식 div들 간의 간격 */
+    padding: 5%;
+  }
+
+  .child {
+    flex: 1 1 100%;             /* 화면이 작으면 자식 div가 100% 크기를 차지하도록 설정 */
+  }
+  
+
+  .image-plus {
+    width : 30px;
+  }
+
+  .rounded-box {
+    width: 300px;  /* 원하는 크기로 조절 */
+    height: 60px; /* 원하는 높이로 조절 */
+  }
+
+  .text-small {
+    font-size: 10px;
+  }
+
+  .text-mid {
+    font-size: 18px;
+    padding-bottom : 13%;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .text-mid-top {
+    font-size: 14px;
+  }
+
+  .text-large {
+    font-size: 40px;
+  }
+
+  .text-large2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .text-large {
+    font-size: 80px;
+  }
+
+  .text-mid {
+    margin-bottom: 80px;
+  }
+  
+}

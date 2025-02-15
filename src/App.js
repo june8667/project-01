@@ -7,6 +7,7 @@ import Seciont2 from "./Sections/section2.js";
 import Seciont3 from "./Sections/section3.js";
 import Seciont4 from "./Sections/section4.js";
 import Seciont5 from "./Sections/section5.js";
+import Seciont6 from "./Sections/section6.js";
 
 
 const App = () => {
@@ -22,13 +23,17 @@ const App = () => {
       <div id="section3" className="section">
         <Seciont3></Seciont3>
       </div>
-      {/* 내시경클리닉 */}
+      {/* 건강검진 */}
       <div id="section4" className="section">
         <Seciont4></Seciont4>
       </div>
       {/* 유방암검진센터 */}
       <div id="section5" className="section">
         <Seciont5></Seciont5>
+      </div>
+      {/* 내시경센터 */}
+      <div id="section6" className="section">
+        <Seciont6></Seciont6>
       </div>
     </div>
   );

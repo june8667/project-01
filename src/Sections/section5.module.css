@@ -1,13 +1,42 @@
 .container {
   /*background-image: url(/public/images/outview3.png); */
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/public/images/outview3.png');
-  background-size: cover;
+  background-image: url('/public/images/background-pattern.png'); /* 패턴 이미지 경로 */
+  background-repeat: repeat;
   background-position: center;
-  backdrop-filter: grayscale(100%);
   display: flex;
   flex-direction: column;
   align-items: center; /* 세로 중앙 정렬 */
   padding: 5%;
+}
+
+.parent {
+  display: flex;                /* Flexbox로 배치 */
+  flex-wrap: wrap;               /* 자식 div가 공간을 초과하면 자동으로 줄 바꿈 */
+  gap: 10px;                     /* 자식 div들 간의 간격 */
+}
+
+/* 자식 div */
+.top {
+  text-align: center;           /* 텍스트 중앙 정렬 */
+}
+
+
+/* 자식 div */
+.child {
+  flex: 1 1 40%;                /* 크기 설정: 최소 40%에서 시작해 최대 크기까지 확장 가능 */
+  border-radius: 100px;          /* 모서리를 둥글게 */
+  padding: 5%;                /* 내부 여백 */
+  text-align: center;           /* 텍스트 중앙 정렬 */
+  box-sizing: border-box;       /* padding, border가 전체 크기에 포함되도록 설정 */
+  background-color: #0c78B7;
+  outline: 1px solid white;
+  outline-offset: -5px;
+}
+
+.text-box {
+  font-size: 34px;
+  color: #FEFFA4;
+  font-weight: 1000;
 }
 
 
@@ -20,15 +49,16 @@
 
 .text-mid {
   font-size: 22px;
-  color: white;
+  color: black;
   margin-bottom: 40px;
-  
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .text-large {
   margin-top: 0;
   font-size: 45px;
-  color: white;
+  color: #0c78B7;
   font-weight: 1000;
   margin-bottom: 30px;
 }
@@ -47,7 +77,6 @@
 
   width: 500px;  /* 원하는 크기로 조절 */
   height: 80px; /* 원하는 높이로 조절 */
-  background: rgba(0, 114, 187, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.4); /* 테두리를 약간만 보이게 */
   border-radius: 50px; /* 상하 50px 반원 */
 }
@@ -86,12 +115,22 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0); /* 반투명 배경 */
-  z-index: 200; /* 이미지 뒤에 깔릴 수 있도록 설정 */
+  background: rgba(255, 0, 0, 0.5); /* 반투명 배경 */
+  z-index: 2000; /* 이미지 뒤에 깔릴 수 있도록 설정 */
 }
 
 
 @media (max-width: 767px) {
+  .parent {
+    gap: 20px;                     /* 자식 div들 간의 간격 */
+  }
+
+  .child {
+    flex: 2 1 100%;             /* 화면이 작으면 자식 div가 100% 크기를 차지하도록 설정 */
+    
+    border-radius: 60px;          /* 모서리를 둥글게 */
+  }
+  
 
   .image-plus {
     width : 30px;
@@ -120,6 +159,7 @@
 }
 
 @media (min-width: 768px) {
+
   .text-large {
     font-size: 80px;
   }

@@ -75,7 +75,7 @@ const ImageSlider = () => {
         className="custom-pagination"
         style={{
           position: "absolute",
-          top: "20%",
+          top: "40%",
           left: "5%",
           zIndex: 10,
           display: "flex",

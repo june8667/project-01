@@ -22,8 +22,13 @@ const App = () => {
       <div id="section3" className="section">
         <Seciont3></Seciont3>
       </div>
+      {/* 내시경클리닉 */}
       <div id="section4" className="section">
         <Seciont4></Seciont4>
+      </div>
+      {/* 유방암검진센터 */}
+      <div id="section5" className="section">
+        <Seciont5></Seciont5>
       </div>
     </div>
   );

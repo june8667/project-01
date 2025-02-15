@@ -15,7 +15,7 @@
   position: absolute;
   width: 100%;
   Height: 100%;
-  top: 0%;
+  top: 20%;
   left: 0%;
   font-weight: bold;
   z-index: 10;  /* 텍스트가 이미지 위에 표시되도록 설정 */

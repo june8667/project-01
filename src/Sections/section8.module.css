@@ -1,0 +1,140 @@
+/* div {
+  border: 1px solid black;
+} */
+
+.container {
+  /*background-image: url(/public/images/outview3.png); */
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/public/images/outview3.png");
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: grayscale(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 5%;
+}
+
+.text-small {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+.text-mid {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.text-item-1 {
+  text-align: left;
+  font-size: 22px;
+  color: #0c78b7;
+  font-weight: 1000;
+}
+
+.text-item-2 {
+  text-align: left;
+  font-size: 18px;
+  color: black;
+}
+
+.text-large {
+  text-align: center;
+  margin: 0;
+  font-size: 45px;
+  color: white;
+  font-weight: 1000;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.item {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  border-right: 1px solid rgb(182, 182, 182);
+  background-color: transparent;
+  padding-left: 5%;
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .text-small {
+    font-size: 10px;
+  }
+
+  .text-mid {
+    font-size: 16px;
+  }
+
+  .text-large {
+    font-size: 40px;
+  }
+
+  .grid-container {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 90%;
+  }
+
+  .item {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid rgb(182, 182, 182);
+    border-right: 1px solid rgb(182, 182, 182);
+    background-color: transparent;
+  }
+
+  .text-item-2 {
+    text-align: left;
+    font-size: 16px;
+    color: black;
+  }
+
+  /* 오른쪽 끝 요소는 border-right 제거 */
+  .item:nth-child(1n) {
+    border-right: none;
+  }
+
+  /* 마지막 두 개의 요소는 border-bottom 제거 */
+  .item:nth-last-child(-n + 1) {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-large {
+    font-size: 80px;
+  }
+
+  .text-mid {
+    margin-bottom: 80px;
+  }
+
+  /* 오른쪽 끝 요소는 border-right 제거 */
+  .item:nth-child(2n) {
+    border-right: none;
+  }
+
+  /* 마지막 두 개의 요소는 border-bottom 제거 */
+  .item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}

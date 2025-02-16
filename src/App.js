@@ -9,6 +9,7 @@ import Seciont4 from "./Sections/section4.js";
 import Seciont5 from "./Sections/section5.js";
 import Seciont6 from "./Sections/section6.js";
 import Seciont7 from "./Sections/section7.js";
+import Seciont8 from "./Sections/section8.js";
 
 
 const App = () => {
@@ -39,6 +40,10 @@ const App = () => {
       {/* 위내시경/대장내시경 */}
       <div id="section7" className="section">
         <Seciont7></Seciont7>
+      </div>
+      {/* 위내시경/대장내시경 */}
+      <div id="section8" className="section">
+        <Seciont8></Seciont8>
       </div>
     </div>
   );

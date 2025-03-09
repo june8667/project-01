@@ -139,7 +139,6 @@
 
   .text-1 {
     color: black;
-    font-family: 'thefaceshop_inklipquid';
     font-size: 35px;
     letter-spacing: 5px;
     line-height: 0;
@@ -157,9 +156,9 @@
 }
 
 
-@media (min-width: 1248) and (max-width: 1648px) {
-  .child {
-    height : 350px;
+@media (min-width: 1025px) and (max-width: 1648px) {
+  .parent{
+    height:600px;
   }
   
   .container {
@@ -167,15 +166,15 @@
   }
 
   .image-click {
-    width : 40px;
+    width : 80px;
   }
 
   .textboxA {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .textboxB {
-    font-size: 12px;
+    font-size: 20px;
   }
 
   .image-logo {
@@ -193,11 +192,6 @@
   .top {
     height : 250px;
   }
-  
-  .parent {
-    height : 100%;
-  }
-
 }
 
 @media (min-width: 1649px) {

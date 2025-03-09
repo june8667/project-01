@@ -11,11 +11,15 @@ import Seciont6 from "./Sections/section6.js";
 import Seciont7 from "./Sections/section7.js";
 import Seciont8 from "./Sections/section8.js";
 import Seciont9 from "./Sections/section9.js";
+import Seciont10 from "./Sections/section10.js";
+import Adress from "./address.js";
+import FloatingButton from "./FloatingButton.js";
 
 
 const App = () => {
   return (
     <div className="total">
+      
       <NavigationBar />
       <div id="section1" className="section">
         <Seciont1></Seciont1>
@@ -50,6 +54,12 @@ const App = () => {
       <div id="section9" className="section">
         <Seciont9></Seciont9>
       </div>
+      {/* 협력병원 */}
+      <div id="section10" className="section">
+        <Seciont10></Seciont10>
+      </div>
+      <Adress></Adress>
+      <FloatingButton></FloatingButton>
     </div>
   );
 };

@@ -1,0 +1,130 @@
+/* div {
+  border: 1px solid black;
+} */
+ 
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-image: url('/public/images/corps/layout10_bg2.jpg');
+  background-size: cover;
+}
+
+.top {
+  text-align: center;           /* 텍스트 중앙 정렬 */  
+}
+
+.text-top-1 {
+  color: black;
+  font-size: 20px;
+  font-weight: 1000;
+  margin-bottom: -10px;
+}
+
+.text-top-2 {
+  color: black;
+  font-size: 13px;
+}
+
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  /* 기본값: 화면이 좁을 때 (4행 × 2열) */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  
+}
+/* 개별 아이템 스타일 */
+.grid-item {
+  padding: 50px;
+  object-fit: fill;
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.grid-item1 {
+  background-image: url('/public/images/corps/samsung.png');
+ 
+}
+.grid-item2 {
+  background-image: url('/public/images/corps/asan.png');
+ 
+}
+.grid-item3 {
+  background-image: url('/public/images/corps/sungmo.png');
+ 
+}
+.grid-item4 {
+  background-image: url('/public/images/corps/severance.png');
+ 
+}
+.grid-item5 {
+  background-image: url('/public/images/corps/korea.png');
+ 
+}
+.grid-item6 {
+  background-image: url('/public/images/corps/national_cancer.png');
+ 
+}
+.grid-item7 {
+  background-image: url('/public/images/corps/kyunghee.png');
+ 
+}
+.grid-item8 {
+  background-image: url('/public/images/corps/injae.png');
+}
+
+
+/* 화면이 좁을 때: 4행 × 2열 */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    width:100%;
+  }
+
+  /* 개별 아이템 스타일 */
+  .grid-item {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px;
+  }
+}
+
+
+/* 화면이 넓을 때: 2행 × 4열 */
+@media (min-width: 1025px) {
+  .container {
+    padding : 4%;
+  }
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    width:80%;
+    padding-top: 1%;
+  }
+
+  /* 개별 아이템 스타일 */
+  .grid-item {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+
+  .text-top-1 {
+    font-size: 30px;
+  }
+  
+  .text-top-2 {
+    font-size: 20px;
+  }
+
+
+}

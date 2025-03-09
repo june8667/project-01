@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 600px;
+}
+
+.container {
+  display: flex;
+}
+
+.descContainer {
+  display: flex;
+  width : 90%;
+  justify-content: space-between;
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.descSchedule {
+  display: flex;
+  align-items: center;
+  line-height: 13px;
+}
+
+.text-top-1 {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 16px;
+  color: black;
+}
+
+.text-top-2 {
+  text-align: center;
+  margin: 0;
+  font-size: 45px;
+  color: black
+}
+
+
+.text-desc-1 {
+  color: #0c78b7;
+}
+
+.text-intense-1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+
+@media (max-width: 1024px) {
+  .descContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .text-top-1 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 12px;
+  }
+  
+  .text-top-2 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .mapContainer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mapContainer {
+    width: 80%;
+  }
+  
+  .descContainer {
+    width : 80%;
+  }
+}

@@ -1,3 +1,4 @@
+// 내시경클리닉
 import React from "react";
 import styles6 from "./section6.module.css";
 

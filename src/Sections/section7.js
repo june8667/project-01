@@ -1,3 +1,4 @@
+// 위내시경/대장내시경
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";

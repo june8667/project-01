@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'thefaceshop_inklipquid'; /* 폰트 이름 지정 */
+  src: url('/src/fonts/thefaceshop_inklipquid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.container {
+  display: flex;
+}
+
+.text-1 {
+  color: black;
+  font-family: 'thefaceshop_inklipquid';
+  font-size: 65px;
+  letter-spacing: 10px;
+}
+
+
+
+/* top */
+.top {
+  background-image: url('/public/images/promise.png'), linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/public/images/TexturizerDefault.png'); /* 패턴 이미지 경로 */
+  background-size: 200px, 100%, 100px;
+  background-repeat: no-repeat, no-repeat ,repeat;
+  background-position: right bottom, center , center;
+  text-align: center;           /* 텍스트 중앙 정렬 */  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* top */
+.top-contents {
+  text-align: center;           /* 텍스트 중앙 정렬 */  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.parent {
+  display: flex;                /* Flexbox로 배치 */
+}
+
+
+/* 자식 div */
+.child {
+  flex: 1 1 40%;                /* 크기 설정: 최소 40%에서 시작해 최대 크기까지 확장 가능 */
+  padding: 5%;                /* 내부 여백 */
+  text-align: center;           /* 텍스트 중앙 정렬 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;  
+}
+
+.child1 {
+  background-image: url('/public/images/layout09-1.jpg');
+  transition: all 1s ease-in-out;
+}
+
+.child2 {
+  background-image: url('/public/images/layout09-2.jpg');
+  
+}
+
+.child3 {
+  background-image: url('/public/images/layout09-3.jpg');
+  
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* 나타날 때 스케일 1 */
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9); /* 사라질 때 스케일 0.9 */
+}
+
+.textboxA {
+  position: absolute; /* 텍스트들이 같은 위치에 겹치도록 설정 */
+  top: 50%;
+  left: 50%;
+  width : 100%;
+  font-size: 24px;
+  color: white;
+  font-weight: 1000;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.textboxB {
+  position: absolute; /* 텍스트들이 같은 위치에 겹치도록 설정 */
+  top: 50%;
+  left: 50%;
+  width : 100%;
+  font-size: 14px;
+  color: white;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.textboxAblack {
+  color: black;
+}
+
+.textboxBblack {
+  color: black;
+}
+
+
+@media (max-width: 1024px) {
+  .child {
+    height : 350px;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
+
+  .image-click {
+    width : 40px;
+  }
+
+  .textboxA {
+    font-size: 16px;
+  }
+
+  .textboxB {
+    font-size: 12px;
+  }
+
+  .image-logo {
+    width : 200px;
+  }
+
+  .text-1 {
+    color: black;
+    font-family: 'thefaceshop_inklipquid';
+    font-size: 35px;
+    letter-spacing: 5px;
+    line-height: 0;
+  }
+
+  .top {
+    height : 250px;
+  }
+  
+  .parent {
+    height : 100%;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .container {
+    height : 500px;
+    justify-items: center;
+  }
+
+  .child {
+    flex: 5%;             /* 화면이 작으면 자식 div가 100% 크기를 차지하도록 설정 */
+  }
+  
+  .top {
+    width: 30%;
+  }
+
+  .parent {
+    width : 70%;
+    height : 100%;
+  }
+
+  .image-click {
+    width : 100px;
+  }
+  
+  .image-logo {
+    width : 350px;
+  }
+
+  .text-1 {
+    line-height: 0;
+  }
+
+}

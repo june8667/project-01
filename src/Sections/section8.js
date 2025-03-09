@@ -1,4 +1,4 @@
-// 내시경클리닉
+// 초음파클리닉
 import React from "react";
 import styles8 from "./section8.module.css";
 

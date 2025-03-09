@@ -1,11 +1,16 @@
+/* div {
+  border: 1px solid black;
+} */
+
 .container {
   /*background-image: url(/public/images/outview3.png); */
   background-image: url('/public/images/background-pattern.png'); /* 패턴 이미지 경로 */
   background-repeat: repeat;
   background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center;
+  flex-wrap: wrap;               /* 자식 div가 공간을 초과하면 자동으로 줄 바꿈 */
+  
   padding: 5%;
 }
 
@@ -17,7 +22,7 @@
 
 /* 자식 div */
 .top {
-  text-align: center;           /* 텍스트 중앙 정렬 */
+  text-align: center;           /* 텍스트 중앙 정렬 */  
 }
 
 
@@ -123,27 +128,26 @@
 @media (max-width: 767px) {
   .parent {
     gap: 20px;                     /* 자식 div들 간의 간격 */
+    width : 100%;
+    padding-left: 25%;
+    padding-right: 25%;
   }
 
   .child {
     flex: 2 1 100%;             /* 화면이 작으면 자식 div가 100% 크기를 차지하도록 설정 */
-    
     border-radius: 60px;          /* 모서리를 둥글게 */
   }
+
+  .image-hpt {
+    width : 70px;
+
+  }
+
+  .image-bed {
+    width : 70px;
+
+  }
   
-
-  .image-plus {
-    width : 30px;
-  }
-
-  .rounded-box {
-    width: 300px;  /* 원하는 크기로 조절 */
-    height: 60px; /* 원하는 높이로 조절 */
-  }
-
-  .text-small {
-    font-size: 10px;
-  }
 
   .text-mid {
     font-size: 16px;
@@ -153,12 +157,20 @@
     font-size: 40px;
   }
 
-  .text-large2 {
-    font-size: 18px;
+  .text-box {
+    font-size: 24px;
   }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) and (max-width: 1286px) {
+
+  .child {
+    flex: 30%;             /* 화면이 작으면 자식 div가 100% 크기를 차지하도록 설정 */
+    
+    border-radius: 60px;          /* 모서리를 둥글게 */
+  }
+  
 
   .text-large {
     font-size: 80px;
@@ -166,6 +178,41 @@
 
   .text-mid {
     margin-bottom: 80px;
+  }
+
+  .top {
+    width: 100%;
+  }
+
+  .parent {
+    width : 100%
+  }
+  
+}
+
+@media (min-width: 1287px) {
+
+  .child {
+    flex: 30%;             /* 화면이 작으면 자식 div가 100% 크기를 차지하도록 설정 */
+    
+    border-radius: 60px;          /* 모서리를 둥글게 */
+  }
+  
+
+  .text-large {
+    font-size: 80px;
+  }
+
+  .text-mid {
+    margin-bottom: 80px;
+  }
+
+  .top {
+    width: 40%;
+  }
+
+  .parent {
+    width : 50%
   }
   
 }

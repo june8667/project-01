@@ -112,8 +112,52 @@
   color: black;
 }
 
-
 @media (max-width: 1024px) {
+  .child {
+    height: 100%;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
+
+  .image-click {
+    width : 40px;
+  }
+
+  .textboxA {
+    font-size: 16px;
+  }
+
+  .textboxB {
+    font-size: 14px;
+  }
+
+  .image-logo {
+    width : 200px;
+  }
+
+  .text-1 {
+    color: black;
+    font-family: 'thefaceshop_inklipquid';
+    font-size: 35px;
+    letter-spacing: 5px;
+    line-height: 0;
+  }
+
+  .top {
+    height : 250px;
+  }
+  
+  .parent {
+    height : 600px;
+    flex-direction: column;
+  }
+
+}
+
+
+@media (min-width: 1248) and (max-width: 1648px) {
   .child {
     height : 350px;
   }
@@ -156,7 +200,7 @@
 
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1649px) {
   .container {
     height : 500px;
     justify-items: center;

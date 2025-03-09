@@ -93,4 +93,8 @@
   .descContainer {
     width : 80%;
   }
+
+  .mapContainer {
+    height: 600px;
+  }
 }

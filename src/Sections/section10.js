@@ -6,7 +6,7 @@ const Seciont10 = () => {
   return (
     <div className={styles10["container"]}>
       <div className={styles10["top"]}>
-        <p className={styles10["text-top-1"]}>삼성바른내과와 협력병원이 함께합니다</p>
+        <p className={styles10["text-top-1"]}>삼성나은내과와 협력병원이 함께합니다</p>
         <p className={styles10["text-top-2"]}>협력병원을 통해 최선의 의료서비스로 보답해드리겠습니다.</p>
       </div>
       <div className={styles10["grid-container"]}>

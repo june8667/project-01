@@ -6,6 +6,7 @@ const Adress = () => {
   // IW, IH 값을 상태로 관리
   const [iw, setIw] = useState(804);
   const [ih, setIh] = useState(410);
+  const [scale, setScale] = useState(1.8); // 기본 scale 값
 
   // parent div와 map image를 참조하기 위한 useRef
   const parentDivRef = useRef(null);
@@ -19,6 +20,13 @@ const Adress = () => {
       // padding을 제외한 실제 이미지 크기를 계산 (padding 제외)
       setIw(parentWidth); // padding을 제외한 width로 IW 설정
       setIh(parentHeight); // padding을 제외한 height로 IH 설정
+
+      if (window.innerWidth < 1024) {
+        setScale(2.0); // 화면 크기가 1024px보다 작을 때 scale 값 변경
+      } else {
+        setScale(1.8); // 기본 scale 값
+      }
+
     }
   };
 
@@ -51,7 +59,7 @@ const Adress = () => {
           <img
             width={iw}
             height={ih}
-            src={`https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=1.25&MX=530943&MY=1139278&S=0&IW=${iw}&IH=${ih}&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo`}
+            src={`https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=${scale}&MX=530943&MY=1139278&S=0&IW=${iw}&IH=${ih}&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo`}
             style={{ border: "1px solid #ccc" }}
             alt="Kakao Map"
           />

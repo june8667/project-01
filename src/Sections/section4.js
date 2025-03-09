@@ -1,4 +1,4 @@
-// 내시경클리닉
+// 건강검진센터
 import { useState } from "react";
 import styles4 from "./section4.module.css";
 
@@ -12,7 +12,7 @@ const Seciont4 = () => {
   return (
     <div className={styles4["container"]}>
       <p className={styles4["text-small"]}>SAMSUNG NAEUN INTERNAL MEDICINE</p>
-      <p className={styles4["text-large"]}>내시경클리닉</p>
+      <p className={styles4["text-large"]}>건강검진센터</p>
       <p className={styles4["text-mid"]} style={{marginBottom : "-15px"}}>
         연 1회 정기적인 종합건강검진을 받을 경우 성인병과 암의 조기진단 및
         예방이 가능합니다.

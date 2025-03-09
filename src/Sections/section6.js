@@ -23,7 +23,7 @@ const Seciont5 = () => {
           <div className={styles6["child"]}>
             <p className={styles6["text-number"]}>01</p>
             <img
-              className={styles6["image-hpt"]}
+              className={styles6["image"]}
               src="/images/icons/layout04_icon01.png"
               alt="icon"
             />
@@ -36,7 +36,7 @@ const Seciont5 = () => {
           <div className={styles6["child"]}>
             <p className={styles6["text-number"]}>02</p>
             <img
-              className={styles6["image-bed"]}
+              className={styles6["image"]}
               src="/images/icons/layout04_icon02.png"
               alt="icon"
             />
@@ -49,7 +49,7 @@ const Seciont5 = () => {
           <div className={styles6["child"]}>
             <p className={styles6["text-number"]}>03</p>
             <img
-              className={styles6["image-bed"]}
+              className={styles6["image"]}
               src="/images/icons/layout04_icon03.png"
               alt="icon"
             />

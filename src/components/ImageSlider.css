@@ -1,5 +1,14 @@
 /* ImageSlider.css */
 
+.container {
+  position: relative;
+}
+
+.sliderDiv {
+  position: relative;
+  height : 900px;
+}
+
 .slick-slide img {
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
@@ -64,6 +73,7 @@
 
 
 .custom-pagination .swiper-pagination-bullet {
+  
   width: 12px;
   height: 12px;
   border: 1px solid white; /* 흰색 테두리 */
@@ -71,17 +81,32 @@
   border-radius: 50%;
   opacity: 1;
   transition: background-color 0.3s, opacity 0.3s;
+  
 }
 
 .custom-pagination .swiper-pagination-bullet-active {
   background-color: white; /* 선택된 bullet은 흰색 */
   border-color: white; /* 테두리 유지 */
   opacity: 1;
+  top: "25%" !important;
+}
+
+.custom-pagination {
+  position: absolute !important;
+  top: 25% !important;
+  left: 5% !important;
+  z-index: 10 !important;
+  display: flex !important;
+  width: 50% !important;
+  
 }
 
 
 /* 화면 너비가 767px 이하일 때 텍스트 크기 줄이기 */
 @media (max-width: 767px) {
+  .custom-pagination {
+    top: 40% !important;
+  }
 
   .custom-pagination .swiper-pagination-bullet {
     width: 5px;
@@ -106,6 +131,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 1749px)  {
+
+  .custom-pagination {
+    top: 42% !important;
+  }
   
   .text-main-1 {
     font-size: 30px;
@@ -123,16 +152,24 @@
 /* 화면 너비가 1200px 이상일 때 텍스트 크기 크게 설정 */
 @media (min-width: 1750px) {
 
+  .custom-pagination {
+    top: 25% !important;
+  }
+
+  .text-position {
+    top: 10%;
+  }
+
   .text-main-1 {
     font-size: 50px;
   }
   
   .text-main-2 {
-    font-size: 162px;
+    font-size: 142px;
   }
   
   .text-fix {
-    font-size: 80px;
+    font-size: 50px;
   }
 
 }

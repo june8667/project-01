@@ -53,10 +53,22 @@ const Seciont5 = () => {
               src="/images/icons/layout04_icon03.png"
               alt="icon"
             />
-            <p className={styles6["text-box"]}>믿을 수 있는 내시경</p>
+            <p className={styles6["text-box"]}>믿을 수 있는 실력</p>
             <p className={styles6["text-mid"]}>
-              위내시경 2만례, 대장내시경 5천례 이상 숙련된 소화기내시경 전문의가
+              위내시경 5만례, 대장내시경 8천례 이상 숙련된 소화기내시경 전문의가
               직접 검사합니다.
+            </p>
+          </div>
+          <div className={styles6["child"]}>
+            <p className={styles6["text-number"]}>04</p>
+            <img
+              className={styles6["image"]}
+              src="/images/icons/layout04_icon04.png"
+              alt="icon"
+            />
+            <p className={styles6["text-box"]}>안전한 수면 환경</p>
+            <p className={styles6["text-mid"]}>
+              내시경 검사 전후 산소포화도, 생체징후 등을 모니터링하여 안전한 수면내시경을 진행합니다.
             </p>
           </div>
         </div>

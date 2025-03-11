@@ -24,7 +24,7 @@
 
 .text-mid {
   text-align: center;
-  font-size: 22px;
+  font-size: 21px;
   color: white;
   padding-left: 10%;
   padding-right: 10%;
@@ -32,9 +32,9 @@
 
 .text-item-1 {
   text-align: left;
-  font-size: 22px;
+  font-size: 21px;
   color: #0c78b7;
-  font-weight: 1000;
+  font-weight: 800;
 }
 
 .text-item-2 {
@@ -48,7 +48,7 @@
   margin: 0;
   font-size: 45px;
   color: white;
-  font-weight: 1000;
+  font-weight: 500;
 }
 
 .grid-container {

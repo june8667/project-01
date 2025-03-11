@@ -19,7 +19,7 @@
 }
 
 .text-mid {
-  font-size: 22px;
+  font-size: 21px;
   color: white;
   margin-bottom: 40px;
   
@@ -29,7 +29,7 @@
   margin-top: 0;
   font-size: 45px;
   color: white;
-  font-weight: 1000;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
@@ -37,7 +37,7 @@
 .text-large2 {
   font-size: 30px;
   color: white;
-  font-weight: 1000;
+  font-weight: 500;
 }
 
 .rounded-box {

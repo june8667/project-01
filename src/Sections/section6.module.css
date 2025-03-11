@@ -55,7 +55,7 @@
 }
 
 .text-mid {
-  font-size: 22px;
+  font-size: 21px;
   color: gray;
   margin-bottom: 0px;
   margin-left: 10%;
@@ -74,7 +74,7 @@
   margin-top: 0;
   font-size: 45px;
   color: white;
-  font-weight: 1000;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
@@ -130,6 +130,10 @@
 
   .text-mid {
     margin-bottom: 80px;
+  }
+
+  .child {
+    flex: 20%;                /* 크기 설정: 최소 40%에서 시작해 최대 크기까지 확장 가능 */
   }
   
 }

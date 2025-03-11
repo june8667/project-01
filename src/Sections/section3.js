@@ -45,7 +45,11 @@ const Section3 = () => {
             <br />
             유럽간학회 EASL
             <br />
-            아시아태평양 간학회 APASL 회원
+            아시아태평양 간학회 APASL
+            <br />
+            임상 내분비 학회
+            <br />
+            임상 초음파 학회
             <br />
           </p>
         </div>

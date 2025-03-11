@@ -35,9 +35,9 @@ const App = () => {
         <Seciont4></Seciont4>
       </div>
       {/* 유방암검진센터 */}
-      <div id="section5" className="section">
+      {/* <div id="section5" className="section">
         <Seciont5></Seciont5>
-      </div>
+      </div> */}
       {/* 내시경센터 */}
       <div id="section6" className="section">
         <Seciont6></Seciont6>

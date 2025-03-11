@@ -14,7 +14,7 @@ const ImageSlider = () => {
     },
     {
       src: "/images/slides/main02.jpg",
-      text: "소화기내과 세부 전문의 1인 협진 시스템",
+      text: "소화기내과 세부 전문의 진료 시스템",
     },
     {
       src: "/images/slides/main03.jpg",
@@ -42,7 +42,6 @@ const ImageSlider = () => {
             key={index}
             style={{
               display: "flex",
-              alignItems: "center",
               justifyContent: "center",
             }}
           >
@@ -73,14 +72,6 @@ const ImageSlider = () => {
       {/* 페이지네이션 점을 표시할 컨테이너 */}
       <div
         className="custom-pagination"
-        style={{
-          position: "absolute",
-          top: "40%",
-          left: "5%",
-          zIndex: 10,
-          display: "flex",
-          width : "50%",
-        }}
       ></div>
     </div>
   );

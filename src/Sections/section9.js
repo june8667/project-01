@@ -1,4 +1,4 @@
-// 유방암검진센터
+// 약속합니다.
 import React, { useState } from "react";
 import styles9 from "./section9.module.css";
 

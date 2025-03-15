@@ -1,0 +1,237 @@
+/* div {
+  border: 1px solid black;
+} */
+
+
+@font-face {
+  font-family: 'Jalnan2TTF'; /* 폰트 이름 지정 */
+  src: url('/src/fonts/ongul.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-Index: 100; 
+  align-items: center;
+  width: 100%;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navList li {
+  text-align: center;
+  
+}
+
+.navLink {
+  align-items: center; 
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.logo {
+  align-items: center; 
+  text-decoration: none;
+  color: white;
+  display: flex;
+  height: 100%;
+  width : 300px;
+
+  font-family: Jalnan2TTF;
+  font-size: 24px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;;
+}
+
+.logo p {
+  width: 130px;
+  height: auto;;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 780px) {
+  /* 화면이 좁을 때 */
+  /* src/components/NavigationBar.css */
+  .navContainer {
+    justify-content: center;
+    height: 50px;
+  }
+
+  .logoBox {
+    padding-left: 5%;
+    padding-right: 10%;
+    justify-content: space-between;
+    width : 100%;
+  }
+
+  .logo img {
+    width: 130px;
+    height: auto;;
+  }
+  .logo p {
+    height: auto;;
+    font-size: 20px;
+  }
+
+  .navList {
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+
+  .navLink {
+    align-items: center; 
+    text-decoration: none;
+    color: white;
+    display: flex;
+  }
+  
+  .menu {
+    height : 0 ;
+    display: flex;
+    flex-direction: column;
+    /* 항목 사이의 간격 */
+    margin-left: auto;
+    position: absolute;
+    top: 50px;
+    /* 네비게이션 바 바로 아래 */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    /* 기본 높이는 0으로 설정 */
+    overflow: hidden;
+    /* 내용이 넘치지 않도록 숨김 */
+    transition: height 0.2s ease-out;
+    /* 높이가 늘어나는 애니메이션 */
+    z-index: 99;
+  }
+
+  .menu.active {
+    display: flex;
+    justify-content: flex-start;
+    height: 290px;
+    /* 메뉴 항목의 총 높이에 맞게 설정 */
+  }
+  
+  .menu li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+    /* 항목들을 왼쪽 정렬 */
+    padding-left: 20px;
+    /* 왼쪽 여백 */
+    padding-right: 20px;
+
+    /* 항목들 사이에 흰색 구분선 추가 */
+    border-bottom: 1px solid white;
+    
+    /* 항목의 너비를 80%로 설정 */
+    width: 85%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+    /* 마지막 항목에는 구분선이 안 보이게 설정 */
+  }
+
+  .menu a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .logoBox {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    right: 20px;
+    top: 20px;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+}
+
+
+@media (min-width: 780px) {
+  
+  .logo img {
+    width: 200px;
+    height: auto;;
+  }
+  
+  .logo p {
+    width: 130px;
+    height: auto;;
+    font-size: 30px;
+  }
+
+  .logo {
+    width : 400px;
+  }
+
+
+  .navList {
+    width: 55%;
+  }
+
+  .navLink {
+    height: 100px;  
+  }
+  /* 화면이 넓을 때 */
+  .hamburger {
+    display: none;
+  }
+}

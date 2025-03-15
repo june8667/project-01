@@ -1,7 +1,7 @@
 // src/App.js
 import React from "react";
 import "./App.css";
-import NavigationBar from "./components/NavigationBar.js";
+import NavigationBar2 from "./components/NavigationBar2.js";
 import Seciont1 from "./Sections/section1.js";
 import Seciont2 from "./Sections/section2.js";
 import Seciont3 from "./Sections/section3.js";
@@ -20,13 +20,15 @@ const App = () => {
   return (
     <div className="total">
       
-      <NavigationBar />
+      <NavigationBar2 />
       <div id="section1" className="section">
         <Seciont1></Seciont1>
       </div>
+      {/* 진료과목소개 */}
       <div id="section2" className="section">
         <Seciont2></Seciont2>
       </div>
+      {/* 의료진소개 */}
       <div id="section3" className="section">
         <Seciont3></Seciont3>
       </div>
@@ -38,7 +40,7 @@ const App = () => {
       {/* <div id="section5" className="section">
         <Seciont5></Seciont5>
       </div> */}
-      {/* 내시경센터 */}
+      {/* 내시경클리닉 */}
       <div id="section6" className="section">
         <Seciont6></Seciont6>
       </div>
@@ -46,7 +48,7 @@ const App = () => {
       <div id="section7" className="section">
         <Seciont7></Seciont7>
       </div>
-      {/* 위내시경/대장내시경 */}
+      {/* 초음파클리닉 */}
       <div id="section8" className="section">
         <Seciont8></Seciont8>
       </div>
@@ -58,7 +60,10 @@ const App = () => {
       <div id="section10" className="section">
         <Seciont10></Seciont10>
       </div>
-      <Adress></Adress>
+      {/* 오시는길 */}
+      <div id="section11" className="section">
+        <Adress></Adress>
+      </div>
       <FloatingButton></FloatingButton>
     </div>
   );

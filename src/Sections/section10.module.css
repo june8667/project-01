@@ -9,6 +9,7 @@
   padding: 20px;
   background-image: url('/public/images/corps/layout10_bg2.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .top {
@@ -30,7 +31,7 @@
 
 .grid-container {
   display: grid;
-  gap: 5px;
+  gap: 15px;
   /* 기본값: 화면이 좁을 때 (4행 × 2열) */
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
@@ -88,14 +89,9 @@
 
   /* 개별 아이템 스타일 */
   .grid-item {
-    padding-left: 0px;
-    padding-right: 0px;
+    margin: 2%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .grid-item5 {
     background-size: contain;
   }
 }
@@ -111,20 +107,16 @@
     grid-template-rows: repeat(2, auto);
     width:80%;
     padding-top: 1%;
+    gap: 30px;
   }
 
   /* 개별 아이템 스타일 */
   .grid-item {
-    padding-left: 0px;
-    padding-right: 0px;
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+    margin: 5%;
 
-  .grid-item5 {
-    background-size: 70%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .text-top-1 {

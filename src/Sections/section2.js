@@ -1,3 +1,4 @@
+// 진료과목
 import React from "react";
 import styles from "./section2.module.css"; // CSS Module import
 

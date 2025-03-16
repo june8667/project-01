@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -7,6 +7,12 @@ import "swiper/css/pagination"; // Pagination 스타일 추가
 import "./ImageSlider.css";
 
 const ImageSlider = () => {
+  const [showSlider, setShowSlider] = useState(false);
+
+  useEffect(() => {
+    setShowSlider(true); // 컴포넌트가 렌더링 될 때 네비게이션을 표시
+  }, []);
+
   const images = [
     {
       src: "/images/slides/main01.jpg",
@@ -23,7 +29,7 @@ const ImageSlider = () => {
   ];
 
   return (
-    <div className="slideContainer">
+    <div className={`slideContainer ${showSlider ? 'fade-in' : ''}`}>
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"

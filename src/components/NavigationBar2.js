@@ -3,9 +3,17 @@ import { Link } from "react-scroll"; // react-scroll 사용
 import styles from "./NavigationBar2.module.css"; // CSS Module 불러오기
 
 const Nav = () => {
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    setShowNav(true); // 컴포넌트가 렌더링 될 때 네비게이션을 표시
+  }, []);
 
   const rootStyles = getComputedStyle(document.documentElement);
-  const offsetValue = parseInt(rootStyles.getPropertyValue('--nav-offset').trim(), 10);
+  const offsetValue = parseInt(
+    rootStyles.getPropertyValue("--nav-offset").trim(),
+    10
+  );
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -13,7 +21,6 @@ const Nav = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
   const menuRef = useRef(null); // 메뉴 영역을 참조하기 위한 ref
-
 
   // 메뉴 외부 클릭 시 메뉴 닫는 함수
   const handleClickOutside = (e) => {
@@ -30,10 +37,9 @@ const Nav = () => {
       document.removeEventListener("mousedown", handleClickOutside); // 언마운트 시 이벤트 리스너 제거
     };
   }, []);
-
   return (
     <nav
-      className={`${styles.navContainer} ${isMenuOpen ? styles.open : ""}`}
+      className={`${styles.navContainer} ${isMenuOpen ? styles.open : ""} ${showNav ? styles.fadein : ''}`}
       ref={menuRef}
     >
       <div className={styles.logoBox}>

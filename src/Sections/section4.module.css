@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center; /* 세로 중앙 정렬 */
   padding: 5%;
+  position:relative;
 }
 
 
@@ -81,17 +82,21 @@
 
 /* 투명한 div (오버레이) */
 .overlay {
-  position: fixed;
-  top: -40vh;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0); /* 반투명 배경 */
+  position: absolute;
+  top : 0;
+  left : 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
   z-index: 200; /* 이미지 뒤에 깔릴 수 있도록 설정 */
 }
 
 
 @media (max-width: 767px) {
+
+  .container {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
 
   .image-plus {
     width : 30px;

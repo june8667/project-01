@@ -79,7 +79,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 
   .parent {
     gap: 20px;                     /* 자식 div들 간의 간격 */
@@ -122,7 +122,31 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) and (max-width: 1596px) {
+
+  .text-large {
+    font-size: 80px;
+  }
+
+  .text-box {
+    font-size:20px;
+  }
+  
+  .text-mid {
+    font-size: 16px;
+  }
+
+  .text-mid {
+    margin-bottom: 80px;
+  }
+
+  .child {
+    flex: 20%;                /* 크기 설정: 최소 40%에서 시작해 최대 크기까지 확장 가능 */
+  }
+  
+}
+
+@media (min-width: 1597px) {
 
   .text-large {
     font-size: 80px;

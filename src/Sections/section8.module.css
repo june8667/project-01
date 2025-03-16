@@ -76,6 +76,10 @@
     grid-template-columns: 1fr;
   }
 
+  .container br {
+    display: none;
+  }
+
   .text-small {
     font-size: 10px;
   }

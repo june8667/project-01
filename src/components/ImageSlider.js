@@ -23,7 +23,7 @@ const ImageSlider = () => {
   ];
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="slideContainer">
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
@@ -48,10 +48,7 @@ const ImageSlider = () => {
             <img
               src={item.src}
               alt={`slide-${index}`}
-              style={{
-                width: "130%",
-                objectFit: "cover",
-              }}
+              className="slideImg"
             />
             <div className="text-overlay">
               <div className="text-position">

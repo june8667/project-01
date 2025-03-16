@@ -3,14 +3,16 @@ import { Link } from "react-scroll"; // react-scroll 사용
 import styles from "./NavigationBar2.module.css"; // CSS Module 불러오기
 
 const Nav = () => {
+
+  const rootStyles = getComputedStyle(document.documentElement);
+  const offsetValue = parseInt(rootStyles.getPropertyValue('--nav-offset').trim(), 10);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
   const menuRef = useRef(null); // 메뉴 영역을 참조하기 위한 ref
-
-  const offsetValue = -50; // offset 값을 한 번만 설정
 
 
   // 메뉴 외부 클릭 시 메뉴 닫는 함수
@@ -88,7 +90,7 @@ const Nav = () => {
         </li>
         <li>
           <Link
-            to="section4"
+            to="section6"
             smooth={true}
             duration={500}
             className={styles.navLink}

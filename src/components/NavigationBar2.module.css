@@ -2,6 +2,9 @@
   border: 1px solid black;
 } */
 
+:root {
+  --nav-offset: -50;
+}
 
 @font-face {
   font-family: 'Jalnan2TTF'; /* 폰트 이름 지정 */
@@ -74,8 +77,8 @@
 }
 
 .hamburger .bar {
-  width: 20px;
-  height: 2px;
+  width: 25px;
+  height: 1px;
   background-color: white;
   border-radius: 2px;
 }
@@ -93,7 +96,12 @@
   text-decoration: none;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1279px) {
+
+  :root {
+    --nav-offset: 50px;
+  }
+
   /* 화면이 좁을 때 */
   /* src/components/NavigationBar.css */
   .navContainer {
@@ -209,7 +217,15 @@
 }
 
 
-@media (min-width: 780px) {
+@media (min-width: 1280px) and (max-width:1499px) {
+
+  :root {
+    --nav-offset: -100;
+  }
+
+  .navList {
+    font-size: 16px;
+  }
   
   .logo img {
     width: 200px;
@@ -220,6 +236,46 @@
     width: 130px;
     height: auto;;
     font-size: 30px;
+  }
+
+  .logo {
+    width : 320px;
+  }
+
+
+  .navList {
+    width: 55%;
+  }
+
+  .navLink {
+    height: 100px;  
+  }
+  /* 화면이 넓을 때 */
+  .hamburger {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1500px) {
+
+  :root {
+    --nav-offset: -110;
+  }
+
+  .navList {
+    font-size: 20px;
+  }
+  
+  .logo img {
+    width: 230px;
+    height: auto;;
+  }
+  
+  .logo p {
+    width: 130px;
+    height: auto;;
+    font-size: 35px;
   }
 
   .logo {

@@ -87,14 +87,29 @@
 
 @media (min-width: 1025px) {
   .mapContainer {
-    width: 80%;
+    width: 60%;
   }
   
   .descContainer {
-    width : 80%;
+    width : 60%;
   }
 
   .mapContainer {
     height: 600px;
+  }
+  .top {
+    padding : 3%
+  }
+
+  .text-desc-1 {
+    padding-top: 5%;
+    font-size: 24px;
+  }
+
+  .descSchedule {
+    font-size: 22px;
+  }
+  .text-intense-1 {
+    font-size: 26px;
   }
 }

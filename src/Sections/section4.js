@@ -1,31 +1,9 @@
 // 건강검진센터
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import styles4 from "./section4.module.css";
 
 const Seciont4 = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const menuRef = useRef(null); // 메뉴 영역을 참조하기 위한 ref
-
-  // 메뉴 외부 클릭 시 메뉴 닫는 함수
-  const handleClickOutside = (e) => {
-    if (menuRef.current && !menuRef.current.contains(e.target)) {
-      setIsOpen(false);
-    }
-  };
-
-   // useEffect를 사용하여 컴포넌트가 마운트/언마운트될 때 이벤트 리스너 추가 및 제거
-    useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside); // 클릭 이벤트 리스너 추가
-  
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside); // 언마운트 시 이벤트 리스너 제거
-      };
-    }, []);
 
   return (
     <div className={styles4["container"]}>
@@ -52,9 +30,7 @@ const Seciont4 = () => {
       </div>
       {/* 팝업(모달) */}
       {isOpen && (
-        <div className={styles4["modal"]} onClick={() => setIsOpen(false)} ref={menuRef}>
-          {" "}
-          {/* 바깥 클릭 시 닫힘 */}
+        <div style={modalStyles.overlay} onClick={() => setIsOpen(false)}>
           <div
             className={styles4["modal-content"]}
             onClick={(e) => e.stopPropagation()}
@@ -63,14 +39,31 @@ const Seciont4 = () => {
           </div>
         </div>
       )}
-      {isOpen && (
-      <div
-        className={styles4["overlay"]}
-        onClick={togglePopup} // 오버레이 클릭 시 팝업 닫기
-      ></div>
-      )}
     </div>
   );
+};
+
+// 스타일 객체
+const modalStyles = {
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.7)", // 검은색 투명 배경
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 1000,
+  },
+  modal: {
+    backgroundColor: "#fff",
+    padding: "20px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    maxWidth: "80%",
+  },
 };
 
 export default Seciont4;

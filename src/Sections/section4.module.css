@@ -3,14 +3,11 @@
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/public/images/outview3.png');
   background-size: cover;
   background-position: center;
-  backdrop-filter: grayscale(100%);
   display: flex;
   flex-direction: column;
   align-items: center; /* 세로 중앙 정렬 */
   padding: 5%;
-  position:relative;
 }
-
 
 .text-small {
   letter-spacing: 5px;

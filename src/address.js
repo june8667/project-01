@@ -109,6 +109,12 @@ const Adress = () => {
                 <p>FAX. 031-552-7576</p>
                 <p>E-mail. samsung-naeun@naver.com</p>
                 <p>블로그 바로가기</p>
+                <div 
+                onClick={() => window.open("https://blog.naver.com/samsung-naeun")} 
+                className={address["blog-box"]}>
+                <img src="/images/icons/icon_blog.png" alt="Blog" style={{ width : "40px", height : "40px"}} /> 
+                <p>&nbsp;&nbsp;&nbsp;/samsungnaeun</p>
+                </div>
               </div>
             </div>
           </div>

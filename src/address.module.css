@@ -60,6 +60,12 @@
   font-weight: 700;
 }
 
+.blog-box {
+  display : flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 
 
 @media (max-width: 1024px) {

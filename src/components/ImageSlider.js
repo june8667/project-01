@@ -13,6 +13,18 @@ const ImageSlider = () => {
     setShowSlider(true); // 컴포넌트가 렌더링 될 때 네비게이션을 표시
   }, []);
 
+  const [isReady, setIsReady] = useState(false);
+
+  // 예시: 컴포넌트가 로딩된 후 렌더링하도록 하기
+  useEffect(() => {
+    // 예시로 2초 후 준비 상태를 변경
+    const timer = setTimeout(() => {
+      setIsReady(true);
+    }, 1000); // 2초 후 컴포넌트 준비 완료
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const images = [
     {
       src: "/images/slides/main01.jpg",
@@ -66,7 +78,7 @@ const ImageSlider = () => {
                   <br />
                   INTERNAL MEDICINE
                 </p>
-                <p className="text-fix">{item.text}</p>
+                <p className={`text-fix ${isReady ? 'show' : ''}`}>{item.text}</p>
               </div>
             </div>
           </SwiperSlide>

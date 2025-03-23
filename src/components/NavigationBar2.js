@@ -118,7 +118,7 @@ const Nav = () => {
             초음파클리닉
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to=""
             smooth={true}
@@ -129,7 +129,7 @@ const Nav = () => {
           >
             병원둘러보기
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="section11"

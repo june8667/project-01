@@ -48,19 +48,19 @@ const Seciont8 = () => {
           </p>
         </div>
         <div class={styles8["item"]}>
-          <p className={styles8["text-item-1"]}>유방 초음파</p>
-          <p className={styles8["text-item-2"]}>
-            유방 X선 검사에서 발견하기 어려운 병변을 <br />
-            초음파 검사를 통해 정밀하게 진단 할 수 있습니다.
-          </p>
-        </div>
-        <div class={styles8["item"]}>
           <p className={styles8["text-item-1"]}>골밀도 검사</p>
           <p className={styles8["text-item-2"]}>
             골다공증을 진단하는 검사로서
             <br />
             빠르고 간단하게 검사받을 수 있습니다.
           </p>
+        </div>
+        <div class={styles8["item"]}>
+          {/* <p className={styles8["text-item-1"]}>유방 초음파</p>
+          <p className={styles8["text-item-2"]}>
+            유방 X선 검사에서 발견하기 어려운 병변을 <br />
+            초음파 검사를 통해 정밀하게 진단 할 수 있습니다.
+          </p> */}
         </div>
       </div>
     </div>

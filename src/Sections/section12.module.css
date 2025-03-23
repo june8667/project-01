@@ -30,7 +30,7 @@
 
 
 .logo img {
-  width: 150px;
+  width: 250px;
   height: auto;
 }
 
@@ -69,12 +69,16 @@
   .modal {
     width : 80%;
   }
+
+  .top {
+    padding: 1%;
+  }
   .bottom {
     flex-direction: column;
+    justify-content: center;
     height : 220px;
     width : 100%;
   }
-
 
   .logo {
     margin-left: 20px;
@@ -125,6 +129,11 @@
   
     font-family: Jalnan2TTF;
     font-size: 24px;
+  }
+
+  .logo img {
+    width: 300px;
+    height: auto;
   }
 }
   

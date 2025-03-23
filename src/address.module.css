@@ -72,6 +72,8 @@
   .descContainer {
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 15px;
+    padding-bottom: 23px;
     
   }
 
@@ -88,6 +90,9 @@
 
   .mapContainer {
     height: 400px;
+  }
+  .text-desc-1 {
+    line-height: 0;
   }
 }
 

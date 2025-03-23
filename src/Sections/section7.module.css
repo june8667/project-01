@@ -35,6 +35,11 @@
 @media (max-width: 767px) {
 
   .text-overlay {
+    top: 10%;
+  }
+
+
+  .text-overlay {
     font-size: 64px; /* 작은 화면에서는 텍스트 크기를 고정 */
   }
 

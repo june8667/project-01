@@ -34,7 +34,6 @@ const Section11 = () => {
       <div className={styles12["bottom"]}>
         <div className={styles12["logo"]}>
           <img src="/images/logo.png" alt="description"></img>
-          <p>건강검진센터</p>
         </div>
         <div className={styles12["desc"]}>
           <div>

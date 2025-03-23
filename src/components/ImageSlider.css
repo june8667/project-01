@@ -73,8 +73,7 @@
   top: 100%;
   left: 0%;
   color: white;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
   transition: opacity 1s ease-in-out; /* 2초 지연 후 서서히 나타남 */
 }
 

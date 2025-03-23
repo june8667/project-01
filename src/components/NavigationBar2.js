@@ -45,7 +45,6 @@ const Nav = () => {
       <div className={styles.logoBox}>
         <div className={styles.logo}>
           <img src="/images/logo.png" alt="description"></img>
-          <p>건강검진센터</p>
         </div>
         <div className={`${styles.hamburger}`} onClick={toggleMenu}>
           <div className={`${styles.bar}`}></div>

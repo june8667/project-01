@@ -29,7 +29,7 @@ const ImageSlider = () => {
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         pagination={{
           clickable: true,
@@ -44,10 +44,8 @@ const ImageSlider = () => {
             key={index}
             style={{
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               backgroundColor: "#0c78B7",
-              height : "400px"
+              height : "350px"
             }}
           >
             <div className={styles7["text-overlay"]}>

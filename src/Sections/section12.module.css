@@ -1,0 +1,130 @@
+/* section2.css */
+/* div {
+  border: 1px solid black;
+} */
+
+.container {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  flex-direction: column;
+  gap : 1px;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  width : 100%;
+  background-color: gray;
+}
+.top p {
+  cursor: pointer;
+  font-size: 15px;
+  color: lightgray;
+}
+
+.bottom {
+  width :  100%;
+  background-color: gray;
+  display: flex;
+}
+
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.bottom p {
+  color: lightgray;
+}
+
+.text1 {
+  font-weight: 800;
+  line-height: 0px;
+}
+
+.text3 {
+  font-size: 10px;
+}
+
+
+.modal {
+  padding: 20px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+/* 화면이 좁을 때: 4행 × 2열 */
+@media (max-width: 1024px) {
+  .container {
+    width : 100%;
+  }
+  .modal {
+    width : 80%;
+  }
+  .bottom {
+    flex-direction: column;
+    height : 220px;
+    width : 100%;
+  }
+
+
+  .logo {
+    margin-left: 20px;
+    display: flex;
+    height: auto;
+    align-items: center; 
+    font-family: Jalnan2TTF;
+    font-size: 24px;
+  }
+
+  .text1 {
+    margin-left: 20px;
+    font-weight: 800;
+    line-height: 0px;
+    font-size: 13px;
+  }
+  .text2 {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  
+  .text3 {
+    margin-left: 20px;
+    font-size: 10px;
+  }
+}
+
+
+/* 화면이 넓을 때: 2행 × 4열 */
+@media (min-width: 1025px) {
+  .modal {
+    width : 50%;
+  }  
+  .bottom {
+    height : 180px;
+    justify-content: center;
+    gap : 5%;
+  }
+
+  .logo {
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none;
+    color: white;
+    display: flex;
+    height: 100%;
+    width : 300px;
+  
+    font-family: Jalnan2TTF;
+    font-size: 24px;
+  }
+}
+  

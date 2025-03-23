@@ -12,6 +12,7 @@ import Seciont7 from "./Sections/section7.js";
 import Seciont8 from "./Sections/section8.js";
 import Seciont9 from "./Sections/section9.js";
 import Seciont10 from "./Sections/section10.js";
+import Seciont12 from "./Sections/section12.js";
 import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
 
@@ -64,6 +65,11 @@ const App = () => {
       <div id="section11" className="section">
         <Adress></Adress>
       </div>
+      {/* 비급여 항목 */}
+      <div id="section12" className="section">
+      <Seciont12></Seciont12>
+      </div>
+
       <FloatingButton></FloatingButton>
     </div>
   );

@@ -57,11 +57,9 @@ const Section2 = () => {
               <span />
               심장초음파 / 갑상선초음파
               <span />
-              유방초음파 / 전립선초음파
+              전립선초음파 / 경동맥초음파
               <span />
-              경동맥초음파 / X-ray촬영
-              <span />
-              골밀도검사
+               X-ray촬영 / 골밀도검사
             </p>
           </div>
           <div className={`${styles["grid-item"]} ${styles["item-4"]}`}>

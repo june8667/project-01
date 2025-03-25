@@ -1,3 +1,7 @@
+/* div {
+  border: 1px solid black;
+} */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,6 @@
   justify-content: center;
   
 }
-
 
 .mapContainer {
   display: flex;
@@ -113,14 +116,23 @@
   }
 
   .text-desc-1 {
-    padding-top: 5%;
+    
     font-size: 24px;
   }
 
   .descSchedule {
-    font-size: 22px;
+    font-size: 16px;
   }
   .text-intense-1 {
     font-size: 26px;
+  }
+  .telbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+  .telbox p {
+    margin : 8px 0;
   }
 }

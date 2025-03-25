@@ -104,7 +104,7 @@ const Adress = () => {
           <div className={address["descItem"]}>
             <p className={address["text-desc-1"]}>문의전화</p>
             <div className={address["descSchedule"]}>
-              <div>
+              <div className={address["telbox"]}>
                 <p className={address["text-intense-1"]}>TEL. 031-552-7575</p>
                 <p>FAX. 031-552-7576</p>
                 <p>E-mail. samsung-naeun@naver.com</p>

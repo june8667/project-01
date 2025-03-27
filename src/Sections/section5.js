@@ -18,7 +18,7 @@ const Seciont5 = () => {
           <img
             className={styles5["image-hpt"]}
             src="/images/icons/layout03_icon01.png"
-            alt="icon"
+            
           />
           <p className={styles5["text-box"]}>
             <span style={{ color: "white", fontWeight: "500" }}>
@@ -34,7 +34,7 @@ const Seciont5 = () => {
           <img
             className={styles5["image-bed"]}
             src="/images/icons/layout03_icon02.png"
-            alt="icon"
+            
           />
           <p className={styles5["text-box"]}>
             <span style={{ color: "white", fontWeight: "500" }}>

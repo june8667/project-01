@@ -27,7 +27,7 @@ const Seciont9 = () => {
           <img
             className={styles9["image-logo"]}
             src="/images/logo/logo-horizontal.png"
-            alt="icon"
+            
           />
           <p className={styles9["text-1"]}>약속합니다</p>
         </div>
@@ -50,7 +50,7 @@ const Seciont9 = () => {
             <img
               className={styles9["image-click"]}
               src="/images/click-white.png"
-              alt="icon"
+              
             />
           </div>
           {/* 두 번째 텍스트 (B) */}
@@ -86,7 +86,7 @@ const Seciont9 = () => {
             <img
               className={styles9["image-click"]}
               src="/images/click.png"
-              alt="icon"
+              
             />
           </div>
           {/* 두 번째 텍스트 (B) */}
@@ -123,7 +123,7 @@ const Seciont9 = () => {
             <img
               className={styles9["image-click"]}
               src="/images/click-white.png"
-              alt="icon"
+              
             />
           </div>
           {/* 두 번째 텍스트 (B) */}

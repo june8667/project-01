@@ -25,7 +25,7 @@ const Seciont5 = () => {
             <img
               className={styles6["image"]}
               src="/images/icons/layout04_icon01.png"
-              alt="icon"
+              
             />
             <p className={styles6["text-box"]}>첨단 내시경 장비 사용</p>
             <p className={styles6["text-mid"]}>
@@ -38,7 +38,7 @@ const Seciont5 = () => {
             <img
               className={styles6["image"]}
               src="/images/icons/layout04_icon02.png"
-              alt="icon"
+              
             />
             <p className={styles6["text-box"]}>내시경 세척기 보유</p>
             <p className={styles6["text-mid"]}>
@@ -51,7 +51,7 @@ const Seciont5 = () => {
             <img
               className={styles6["image"]}
               src="/images/icons/layout04_icon03.png"
-              alt="icon"
+              
             />
             <p className={styles6["text-box"]}>믿을 수 있는 실력</p>
             <p className={styles6["text-mid"]}>
@@ -64,7 +64,7 @@ const Seciont5 = () => {
             <img
               className={styles6["image"]}
               src="/images/icons/layout04_icon04.png"
-              alt="icon"
+              
             />
             <p className={styles6["text-box"]}>안전한 수면 환경</p>
             <p className={styles6["text-mid"]}>

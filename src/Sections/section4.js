@@ -24,7 +24,7 @@ const Seciont4 = () => {
         {/* <img
           className={styles4["image-plus"]}
           src="/images/icons/ico-plus.png"
-          alt="icon"
+          
           onClick={() => setIsOpen(true)}
         /> */}
       </div>

@@ -19,14 +19,14 @@ const Seciont4 = () => {
       </p>
       <div className={styles4["rounded-box"]}>
         <p className={styles4["text-large2"]}>
-          건강검진 프로그램 자세히 보기&nbsp;&nbsp;
+          "최신 건강검진 프로그램 완비" &nbsp;&nbsp;
         </p>
-        <img
+        {/* <img
           className={styles4["image-plus"]}
           src="/images/icons/ico-plus.png"
           alt="icon"
           onClick={() => setIsOpen(true)}
-        />
+        /> */}
       </div>
       {/* 팝업(모달) */}
       {isOpen && (

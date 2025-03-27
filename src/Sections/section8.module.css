@@ -85,11 +85,15 @@
   }
 
   .text-mid {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .text-large {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .text-item-1 {
+    font-size: 20px;
   }
 
   .grid-container {
@@ -108,7 +112,7 @@
 
   .text-item-2 {
     text-align: left;
-    font-size: 16px;
+    font-size: 15px;
     color: black;
   }
 

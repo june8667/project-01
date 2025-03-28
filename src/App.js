@@ -15,6 +15,7 @@ import Seciont10 from "./Sections/section10.js";
 import Seciont12 from "./Sections/section12.js";
 import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
+import KakaoMap from "./kakaomap.js";
 
 
 const App = () => {
@@ -69,7 +70,6 @@ const App = () => {
       <div id="section12" className="section">
       <Seciont12></Seciont12>
       </div>
-
       <FloatingButton></FloatingButton>
     </div>
   );

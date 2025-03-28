@@ -1,47 +1,9 @@
 // 주소
 import React, { useState, useEffect, useRef } from "react";
 import address from "./address.module.css";
+import Kakaomap from "./kakaomap";
 
 const Adress = () => {
-  // IW, IH 값을 상태로 관리
-  const [iw, setIw] = useState(804);
-  const [ih, setIh] = useState(410);
-  const [scale, setScale] = useState(1.8); // 기본 scale 값
-
-  // parent div와 map image를 참조하기 위한 useRef
-  const parentDivRef = useRef(null);
-
-  // 부모 div의 크기를 업데이트하는 함수
-  const updateMapSize = () => {
-    if (parentDivRef.current) {
-      const parentWidth = parentDivRef.current.offsetWidth; // 부모 div의 width
-      const parentHeight = parentDivRef.current.offsetHeight; // 부모 div의 height
-
-      // padding을 제외한 실제 이미지 크기를 계산 (padding 제외)
-      setIw(parentWidth); // padding을 제외한 width로 IW 설정
-      setIh(parentHeight); // padding을 제외한 height로 IH 설정
-
-      if (window.innerWidth < 1024) {
-        setScale(2.0); // 화면 크기가 1024px보다 작을 때 scale 값 변경
-      } else {
-        setScale(1.8); // 기본 scale 값
-      }
-
-    }
-  };
-
-  useEffect(() => {
-    // 컴포넌트가 마운트될 때 map 크기 계산
-    updateMapSize();
-
-    // 윈도우 리사이즈 이벤트 핸들러 등록
-    window.addEventListener("resize", updateMapSize);
-
-    // 언마운트될 때 이벤트 핸들러 제거
-    return () => {
-      window.removeEventListener("resize", updateMapSize);
-    };
-  }, []);
 
   return (
     <div className={address["container"]}>
@@ -50,20 +12,8 @@ const Adress = () => {
         <p className={address["text-top-2"]}>오시는 길</p>
         <br />
       </div>
-      <div ref={parentDivRef} className={address["mapContainer"]}>
-        <a
-          href="https://map.kakao.com/?urlX=530943&urlY=1139278&urlLevel=2&map_type=TYPE_MAP&map_hybrid=false"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            width={iw}
-            height={ih}
-            src={`https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=${scale}&MX=530943&MY=1139278&S=0&IW=${iw}&IH=${ih}&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo`}
-            style={{ border: "1px solid #ccc" }}
-            alt="Kakao Map"
-          />
-        </a>
+      <div className={address["mapContainer"]}>
+        <Kakaomap></Kakaomap>
       </div>
       <div className={address["descContainer"]}>
         <div className={address["desc"]}>
@@ -109,11 +59,18 @@ const Adress = () => {
                 <p>FAX. 031-552-7576</p>
                 <p>E-mail. samsung-naeun@naver.com</p>
                 <p>블로그 바로가기</p>
-                <div 
-                onClick={() => window.open("https://blog.naver.com/samsung-naeun")} 
-                className={address["blog-box"]}>
-                <img src="/images/icons/icon_blog.png" alt="Blog" style={{ width : "40px", height : "40px"}} /> 
-                <p>&nbsp;&nbsp;&nbsp;/samsungnaeun</p>
+                <div
+                  onClick={() =>
+                    window.open("https://blog.naver.com/samsung-naeun")
+                  }
+                  className={address["blog-box"]}
+                >
+                  <img
+                    src="/images/icons/icon_blog.png"
+                    alt="Blog"
+                    style={{ width: "40px", height: "40px" }}
+                  />
+                  <p>&nbsp;&nbsp;&nbsp;/samsungnaeun</p>
                 </div>
               </div>
             </div>

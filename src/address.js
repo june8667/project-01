@@ -4,7 +4,6 @@ import address from "./address.module.css";
 import Kakaomap from "./kakaomap";
 
 const Adress = () => {
-
   return (
     <div className={address["container"]}>
       <div className={address["top"]}>
@@ -55,7 +54,9 @@ const Adress = () => {
             <p className={address["text-desc-1"]}>문의전화</p>
             <div className={address["descSchedule"]}>
               <div className={address["telbox"]}>
-                <p className={address["text-intense-1"]}>TEL. 031-552-7575</p>
+                <p className={address["text-intense-1"]}>TEL. <a className={address["phonelink"]}  href="tel:01012345678">031-552-7575</a></p>
+                <p className={address["phonetext"]} >모바일에서 바로 전화걸기</p>
+                
                 <p>FAX. 031-552-7576</p>
                 <p>E-mail. samsung-naeun@naver.com</p>
                 <p>블로그 바로가기</p>

@@ -17,9 +17,9 @@ const Section2 = () => {
             <span />
             <p className={styles["text-mid"]}>종합검진센터</p>
             <p className={styles["text-small"]}>
-              국민건강보험공단 4대암 검진
+              국민건강보험공단 5대암 검진
               <span />
-              (위암, 대장암, 간암, 유방암)
+              (위암, 대장암, 간암, 자궁경부암, 유방암)
               <span />
               종합검진 / 공무원 채용검진
               <span />

@@ -16,12 +16,13 @@ import Seciont12 from "./Sections/section12.js";
 import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
 import KakaoMap from "./kakaomap.js";
+import Popup from "./popup.js";
 
 
 const App = () => {
   return (
     <div className="total">
-      
+      <Popup/>
       <NavigationBar2 />
       <div id="section1" className="section">
         <Seciont1></Seciont1>

@@ -22,7 +22,7 @@ import Popup from "./popup.js";
 const App = () => {
   return (
     <div className="total">
-      <Popup/>
+      {/* <Popup/> */}
       <NavigationBar2 />
       <div id="section1" className="section">
         <Seciont1></Seciont1>

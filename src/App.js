@@ -13,6 +13,7 @@ import Seciont8 from "./Sections/section8.js";
 import Seciont9 from "./Sections/section9.js";
 import Seciont10 from "./Sections/section10.js";
 import Seciont12 from "./Sections/section12.js";
+import Interior from "./Sections/Interior.js";
 import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
 import KakaoMap from "./kakaomap.js";
@@ -63,12 +64,16 @@ const App = () => {
       <div id="section10" className="section">
         <Seciont10></Seciont10>
       </div>
-      {/* 오시는길 */}
+      {/* 병원둘러보기 */}
       <div id="section11" className="section">
+        <Interior></Interior>
+      </div>
+      {/* 오시는길 */}
+      <div id="section12" className="section">
         <Adress></Adress>
       </div>
       {/* 비급여 항목 */}
-      <div id="section12" className="section">
+      <div id="section13" className="section">
       <Seciont12></Seciont12>
       </div>
       <FloatingButton></FloatingButton>

@@ -6,6 +6,7 @@ import Kakaomap from "./kakaomap";
 const Adress = () => {
   return (
     <div className={address["container"]}>
+      <br></br>
       <div className={address["top"]}>
         <p className={address["text-top-1"]}>SAMSUNG NAEUN INTERNAL MEDICINE</p>
         <p className={address["text-top-2"]}>오시는 길</p>

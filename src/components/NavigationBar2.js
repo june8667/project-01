@@ -117,21 +117,21 @@ const Nav = () => {
             초음파클리닉
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link
-            to=""
+            to="section11"
             smooth={true}
             duration={500}
             className={styles.navLink}
             onClick={toggleMenu}
             offset={offsetValue}
           >
-            병원둘러보기
+            병원 둘러보기
           </Link>
-        </li> */}
+        </li>
         <li>
           <Link
-            to="section11"
+            to="section12"
             smooth={true}
             duration={500}
             className={styles.navLink}

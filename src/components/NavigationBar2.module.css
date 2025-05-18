@@ -170,7 +170,7 @@
   .menu.active {
     display: flex;
     justify-content: flex-start;
-    height: 250px;  /* 병원둘러보기 추가시 height: 290px; */
+    height: 290px;  /* 병원둘러보기 추가시 height: 290px; */
     /* 메뉴 항목의 총 높이에 맞게 설정 */
   }
   

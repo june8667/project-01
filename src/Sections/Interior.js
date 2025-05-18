@@ -4,6 +4,7 @@ import interior from "./Interior.module.css";
 const Interior = () => {
   return (
     <div className={interior["container"]}>
+      <br></br>
       <div className={interior["top"]}>
         <p className={interior["text-top-1"]}>
           SAMSUNG NAEUN INTERNAL MEDICINE

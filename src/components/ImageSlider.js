@@ -27,15 +27,15 @@ const ImageSlider = () => {
 
   const images = [
     {
-      src: "/images/slides/main01.jpg",
+      src: "/images/slides/main01.webp",
       text: "건강보험공단 지정 5대암 검진기관",
     },
     {
-      src: "/images/slides/main02.jpg",
+      src: "/images/slides/main02.webp",
       text: "소화기내과 세부 전문의 진료 시스템",
     },
     {
-      src: "/images/slides/main03.jpg",
+      src: "/images/slides/main03.webp",
       text: "대학병원급 장비 및 맞춤형 관리 시스템",
     },
   ];

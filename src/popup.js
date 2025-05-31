@@ -26,7 +26,7 @@ const Popup = () => {
     <div style={styles.overlay}>
       <div style={styles.popup}>
         <img
-          src="/images/popup1.png" // 원하는 이미지 URL로 변경
+          src="/images/popup/popup2.webp" // 원하는 이미지 URL로 변경
           alt="Popup"
           style={styles.image}
           width="800px"

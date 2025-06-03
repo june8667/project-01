@@ -94,7 +94,7 @@ const Popup = ({ imageUrl, zIndex, onBringToFront, initialPosition = { x: 100, y
       <div style={styles.popup}>
         <img src={imageUrl} alt="Popup" style={styles.image} width="800px" />
         <div style={styles.buttonContainer}>
-          <button onClick={handleHideForOneDay} style={{ ...styles.button, ...styles.leftButton }}>
+          <button onClick={handleClose} style={{ ...styles.button, ...styles.leftButton }}>
             1일 동안 보지 않음
           </button>
           <button onClick={handleClose} style={styles.button}>닫기</button>

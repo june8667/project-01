@@ -58,12 +58,12 @@ const App = () => {
 
   return (
     <div className="total">
-      <Popup 
+      {/* <Popup 
         imageUrl="/images/popup/popup2.webp"
         zIndex={zOrders[0]}
         onBringToFront={() => bringToFront(0)}
         initialPosition={pos1}
-      />
+      /> */}
       <Popup imageUrl="/images/popup/popup3.webp"
         zIndex={zOrders[1]}
         onBringToFront={() => bringToFront(1)}

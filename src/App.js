@@ -41,9 +41,18 @@ const App = () => {
     return { x, y };
   };
 
+  const getCenterPosition2 = ({ offsetXPercent = 0, offsetYPercent = 0 } = {}) => {
+    const xOffset = (window.innerWidth / 2) * (offsetXPercent / 100);
+    const yOffset = (window.innerHeight / 2) * (offsetYPercent / 100);
+
+    const x = window.innerWidth / 2 + xOffset;
+    const y = window.innerHeight / 2 + yOffset;
+    return { x, y };
+  };
+
   const mobilePositions = [
-    { x: -100, y: -70}, // 모바일용 팝업1 초기 위치
-    { x: -20, y: -50 }, // 모바일용 팝업2 초기 위치
+    { x: -110, y: -30}, // 모바일용 팝업1 초기 위치
+    { x: -20, y: -90 }, // 모바일용 팝업2 초기 위치
   ];
 
   const desktopPositions = [
@@ -54,19 +63,19 @@ const App = () => {
   const isMobile = window.innerWidth <= 1024;
   const initialPositions = isMobile ? mobilePositions : desktopPositions;
   const pos1 = getCenterPosition({ offsetXPercent: initialPositions[0].x, offsetYPercent: initialPositions[0].y });
-  const pos2 = getCenterPosition({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
+  const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
 
   return (
     <div className="total">
-      {/* <Popup 
-        imageUrl="/images/popup/popup2.webp"
-        zIndex={zOrders[0]}
-        onBringToFront={() => bringToFront(0)}
-        initialPosition={pos1}
-      /> */}
-      <Popup imageUrl="/images/popup/popup3.webp"
+      <Popup 
+        imageUrl="/images/popup/popup.webp"
         zIndex={zOrders[1]}
         onBringToFront={() => bringToFront(1)}
+        initialPosition={pos1}
+      />
+      <Popup imageUrl="/images/popup/popup3.webp"
+        zIndex={zOrders[0]}
+        onBringToFront={() => bringToFront(0)}
         initialPosition={pos2}
       />
       <NavigationBar2 />

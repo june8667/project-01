@@ -81,12 +81,12 @@ const App = () => {
     <div className="total">
       <Popup 
         imageUrl="/images/popup/popup.webp"
-        zIndex={zOrders[2]}
-        onBringToFront={() => bringToFront(2)}
+        zIndex={zOrders[1]}
+        onBringToFront={() => bringToFront(1)}
         initialPosition={pos1}
       />
        <Popup imageUrl="/images/popup/popup5.webp"
-        zIndex={zOrders[1]}
+        zIndex={zOrders[2]}
         onBringToFront={() => bringToFront(1)}
         initialPosition={pos2}
       />

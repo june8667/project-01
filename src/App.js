@@ -87,7 +87,7 @@ const App = () => {
       />
        <Popup imageUrl="/images/popup/popup5.webp"
         zIndex={zOrders[2]}
-        onBringToFront={() => bringToFront(1)}
+        onBringToFront={() => bringToFront(2)}
         initialPosition={pos2}
       />
       <Popup imageUrl="/images/popup/popup3.webp"

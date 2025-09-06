@@ -74,7 +74,7 @@ const App = () => {
   const isMobile = window.innerWidth <= 1024;
   const initialPositions = isMobile ? mobilePositions : desktopPositions;
   const pos1 = getCenterPosition({ offsetXPercent: initialPositions[0].x, offsetYPercent: initialPositions[0].y });
-  //const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
+  const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
   const pos3 = getCenterPosition3({ offsetXPercent: initialPositions[2].x, offsetYPercent: initialPositions[2].y });
 
   return (
@@ -85,11 +85,11 @@ const App = () => {
         onBringToFront={() => bringToFront(2)}
         initialPosition={pos1}
       />
-       {/* <Popup imageUrl="/images/popup/popup2.webp"
+       <Popup imageUrl="/images/popup/popup5.webp"
         zIndex={zOrders[1]}
         onBringToFront={() => bringToFront(1)}
         initialPosition={pos2}
-      /> */}
+      />
       <Popup imageUrl="/images/popup/popup3.webp"
         zIndex={zOrders[0]}
         onBringToFront={() => bringToFront(0)}

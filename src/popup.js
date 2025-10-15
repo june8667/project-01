@@ -103,17 +103,14 @@ const Popup = ({ imageUrl, zIndex, onBringToFront, initialPosition = { x: 100, y
   };
 
   // ✅ 이미지 원본 크기로 팝업 크기 조정
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img) {
-      const onLoad = () => {
-        setSize({ width: img.naturalWidth, height: img.naturalHeight });
-      };
-      if (img.complete) onLoad();
-      else img.addEventListener("load", onLoad);
-      return () => img.removeEventListener("load", onLoad);
-    }
-  }, [imageUrl]);
+ useEffect(() => {
+  const hideUntil = localStorage.getItem("popup_hide_until");
+  if (!hideUntil || new Date().getTime() > parseInt(hideUntil)) {
+    const img = new Image();
+    img.src = imageUrl;
+    img.onload = () => setIsVisible(true); // ✅ 이미지가 다 로드된 뒤 표시
+  }
+}, [imageUrl]);
 
   if (!isVisible) return null;
 

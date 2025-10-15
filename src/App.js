@@ -76,21 +76,24 @@ const App = () => {
   const pos1 = getCenterPosition({ offsetXPercent: initialPositions[0].x, offsetYPercent: initialPositions[0].y });
   const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
   const pos3 = getCenterPosition3({ offsetXPercent: initialPositions[2].x, offsetYPercent: initialPositions[2].y });
+  const imageurl1 = !isMobile ? "/images/popup/popup.webp" : "/images/popup/mobile/popup.webp";
+  const imageurl2 = !isMobile ? "/images/popup/popup5.webp" : "/images/popup/mobile/popup5.webp";
+  const imageurl3 = !isMobile ? "/images/popup/popup3.webp": "/images/popup/mobile/popup3.webp";
 
   return (
     <div className="total">
       <Popup 
-        imageUrl="/images/popup/popup.webp"
+        imageUrl={imageurl1}
         zIndex={zOrders[1]}
         onBringToFront={() => bringToFront(1)}
         initialPosition={pos1}
       />
-       <Popup imageUrl="/images/popup/popup5.webp"
+       <Popup imageUrl={imageurl2}
         zIndex={zOrders[2]}
         onBringToFront={() => bringToFront(2)}
         initialPosition={pos2}
       />
-      <Popup imageUrl="/images/popup/popup3.webp"
+      <Popup imageUrl={imageurl3}
         zIndex={zOrders[0]}
         onBringToFront={() => bringToFront(0)}
         initialPosition={pos3}

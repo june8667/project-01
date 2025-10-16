@@ -82,22 +82,22 @@ const App = () => {
 
   return (
     <div className="total">
-      <Popup 
+      {/* <Popup 
         imageUrl={imageurl1}
         zIndex={zOrders[1]}
         onBringToFront={() => bringToFront(1)}
         initialPosition={pos1}
-      />
+      /> */}
        <Popup imageUrl={imageurl2}
         zIndex={zOrders[2]}
         onBringToFront={() => bringToFront(2)}
         initialPosition={pos2}
       />
-      <Popup imageUrl={imageurl3}
+      {/* <Popup imageUrl={imageurl3}
         zIndex={zOrders[0]}
         onBringToFront={() => bringToFront(0)}
         initialPosition={pos3}
-      />
+      /> */}
       <NavigationBar2 />
       <div id="section1" className="section">
         <Seciont1></Seciont1>

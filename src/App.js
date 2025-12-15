@@ -61,14 +61,14 @@ const App = () => {
 
   const mobilePositions = [
     { x: -110, y: -30}, // 모바일용 팝업1 초기 위치
-    { x: -70, y: -90 }, // 모바일용 팝업2 초기 위치
+    { x: -75, y: -90 }, // 모바일용 팝업2 초기 위치
     { x: -40, y: -90 }, // 모바일용 팝업2 초기 위치
   ];
 
   const desktopPositions = [
     { x: -60, y: -60 }, // 데스크탑용 팝업1 초기 위치
     { x: -25, y: -70 }, // 데스크탑용 팝업2 초기 위치
-    { x: 10, y: -70 }, // 데스크탑용 팝업2 초기 위치
+    { x: 10, y: -60 }, // 데스크탑용 팝업2 초기 위치
   ];
 
   const isMobile = window.innerWidth <= 1024;
@@ -76,23 +76,34 @@ const App = () => {
   const pos1 = getCenterPosition({ offsetXPercent: initialPositions[0].x, offsetYPercent: initialPositions[0].y });
   const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
   const pos3 = getCenterPosition3({ offsetXPercent: initialPositions[2].x, offsetYPercent: initialPositions[2].y });
-  const imageurl1 = !isMobile ? "/images/popup/popup.webp" : "/images/popup/mobile/popup.webp";
+  const imageurl1 = !isMobile ? "/images/popup/gumjin2.png" : "/images/popup/gumjin2.png";
   const imageurl2 = !isMobile ? "/images/popup/popup5.webp" : "/images/popup/mobile/popup5.webp";
   const imageurl3 = !isMobile ? "/images/popup/popup3.webp": "/images/popup/mobile/popup3.webp";
+  const imageurl4 = "/images/popup/a.jpg";
+  const imageurl5 = "/images/popup/b.jpg";
+  const imageurl6 = "/images/popup/c.jpg";
 
   return (
     <div className="total">
-      {/* <Popup 
-        imageUrl={imageurl1}
-        zIndex={zOrders[1]}
-        onBringToFront={() => bringToFront(1)}
-        initialPosition={pos1}
-      /> */}
-       <Popup imageUrl={imageurl2}
-        zIndex={zOrders[2]}
-        onBringToFront={() => bringToFront(2)}
-        initialPosition={pos2}
-      />
+      {isMobile ? (
+        <>
+          
+          </>
+      ) : (
+        <>
+        <Popup 
+            imageUrl={imageurl2}
+            zIndex={zOrders[1]}
+            onBringToFront={() => bringToFront(1)}
+            initialPosition={pos1}
+          />
+        <Popup imageUrl={imageurl1}
+          zIndex={zOrders[0]}
+          onBringToFront={() => bringToFront(2)}
+          initialPosition={pos3}
+        />
+        </>
+      )}
       {/* <Popup imageUrl={imageurl3}
         zIndex={zOrders[0]}
         onBringToFront={() => bringToFront(0)}
@@ -102,6 +113,86 @@ const App = () => {
       <div id="section1" className="section">
         <Seciont1></Seciont1>
       </div>
+      {isMobile && (
+        <>
+      <div
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box"
+            }}
+          >
+            <img
+              src={imageurl4}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+      <div
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box"
+            }}
+          >
+            <img
+              src={imageurl6}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box"
+            }}
+          >
+            <img
+              src={imageurl1}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box"
+            }}
+          >
+            <img
+              src={imageurl5}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          </>
+      )}
       {/* 진료과목소개 */}
       <div id="section2" className="section">
         <Seciont2></Seciont2>

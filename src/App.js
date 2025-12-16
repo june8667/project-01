@@ -79,9 +79,10 @@ const App = () => {
   const imageurl1 = !isMobile ? "/images/popup/gumjin2.png" : "/images/popup/gumjin2.png";
   const imageurl2 = !isMobile ? "/images/popup/popup5.webp" : "/images/popup/mobile/popup5.webp";
   const imageurl3 = !isMobile ? "/images/popup/popup3.webp": "/images/popup/mobile/popup3.webp";
-  const imageurl4 = "/images/popup/a.jpg";
-  const imageurl5 = "/images/popup/b.jpg";
-  const imageurl6 = "/images/popup/c.jpg";
+  const imageurl4 = "/images/popup/a.webp";
+  const imageurl5 = "/images/popup/b.webp";
+  const imageurl6 = "/images/popup/c.webp";
+  const imageurl7 = "/images/popup/d.webp";
 
   return (
     <div className="total">
@@ -150,6 +151,7 @@ const App = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
               }}
             />
           </div>
@@ -169,16 +171,16 @@ const App = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
               }}
             />
           </div>
           <div
             style={{
               width: "100%",
-              height: "100%",
               border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
               overflow: "hidden",
-              boxSizing: "border-box"
+              boxSizing: "border-box",
             }}
           >
             <img
@@ -188,6 +190,26 @@ const App = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: "block",
+              }}
+            />
+          </div>
+           <div
+            style={{
+              width: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box",
+            }}
+          >
+            <img
+              src={imageurl7}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
               }}
             />
           </div>

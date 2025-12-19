@@ -14,6 +14,7 @@ import Seciont9 from "./Sections/section9.js";
 import Seciont10 from "./Sections/section10.js";
 import Seciont12 from "./Sections/section12.js";
 import Interior from "./Sections/Interior.js";
+import PopupGroup from './Popup/PopupGroup.js';
 import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
 import KakaoMap from "./kakaomap.js";
@@ -21,6 +22,20 @@ import Popup from "./popup.js";
 
 
 const App = () => {
+
+  // 🔥 최초 렌더 시 screenWidth 스냅샷
+  const initialScreenWidthRef = React.useRef(window.innerWidth);
+
+  // 🔥 ratio도 최초 한 번만 결정
+  const ratioRef = React.useRef(
+    initialScreenWidthRef.current >= 2500 ? 1.4 : 1
+  );
+
+  // 이후 resize 되어도 값 안 변함
+  const ratio = ratioRef.current;
+
+  
+  
   const [zOrders, setZOrders] = useState([1000, 2000]); // 오버레이 2개
 
   const bringToFront = (index) => {
@@ -76,9 +91,10 @@ const App = () => {
   const pos1 = getCenterPosition({ offsetXPercent: initialPositions[0].x, offsetYPercent: initialPositions[0].y });
   const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
   const pos3 = getCenterPosition3({ offsetXPercent: initialPositions[2].x, offsetYPercent: initialPositions[2].y });
-  const imageurl1 = !isMobile ? "/images/popup/gumjin2.png" : "/images/popup/gumjin2.png";
   const imageurl2 = !isMobile ? "/images/popup/popup5.webp" : "/images/popup/mobile/popup5.webp";
   const imageurl3 = !isMobile ? "/images/popup/popup3.webp": "/images/popup/mobile/popup3.webp";
+  
+  const imageurl1 = "/images/popup/e.webp";
   const imageurl4 = "/images/popup/a.webp";
   const imageurl5 = "/images/popup/b.webp";
   const imageurl6 = "/images/popup/c.webp";
@@ -92,7 +108,15 @@ const App = () => {
           </>
       ) : (
         <>
-        <Popup 
+        <div>
+          <PopupGroup
+            images={[imageurl1, imageurl4, imageurl5, imageurl6, imageurl7]}
+            width={360 * ratio}
+            height={500 * ratio}
+            gap={20}
+          />
+        </div>
+        {/* <Popup 
             imageUrl={imageurl2}
             zIndex={zOrders[1]}
             onBringToFront={() => bringToFront(1)}
@@ -102,7 +126,7 @@ const App = () => {
           zIndex={zOrders[0]}
           onBringToFront={() => bringToFront(2)}
           initialPosition={pos3}
-        />
+        /> */}
         </>
       )}
       {/* <Popup imageUrl={imageurl3}

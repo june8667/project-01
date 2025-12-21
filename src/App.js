@@ -19,6 +19,7 @@ import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
 import KakaoMap from "./kakaomap.js";
 import Popup from "./popup.js";
+import YouTubeEmbed from './Popup/YouTubeEmbed.js';
 
 
 const App = () => {
@@ -34,65 +35,12 @@ const App = () => {
   // 이후 resize 되어도 값 안 변함
   const ratio = ratioRef.current;
 
+  const [url, setUrl] = useState("");
+  const [open, setOpen] = useState(false);
+
   
-  
-  const [zOrders, setZOrders] = useState([1000, 2000]); // 오버레이 2개
-
-  const bringToFront = (index) => {
-    const maxZ = Math.max(...zOrders) + 1;
-    setZOrders((prev) => {
-      const newOrders = [...prev];
-      newOrders[index] = maxZ;
-      return newOrders;
-    });
-  };
-
-  const getCenterPosition = ({ offsetXPercent = 0, offsetYPercent = 0 } = {}) => {
-    const xOffset = (window.innerWidth / 2) * (offsetXPercent / 100);
-    const yOffset = (window.innerHeight / 2) * (offsetYPercent / 100);
-
-    const x = window.innerWidth / 2 + xOffset;
-    const y = window.innerHeight / 2 + yOffset;
-    return { x, y };
-  };
-
-  const getCenterPosition2 = ({ offsetXPercent = 0, offsetYPercent = 0 } = {}) => {
-    const xOffset = (window.innerWidth / 2) * (offsetXPercent / 100);
-    const yOffset = (window.innerHeight / 2) * (offsetYPercent / 100);
-
-    const x = window.innerWidth / 2 + xOffset;
-    const y = window.innerHeight / 2 + yOffset;
-    return { x, y };
-  };
-
-  const getCenterPosition3 = ({ offsetXPercent = 0, offsetYPercent = 0 } = {}) => {
-    const xOffset = (window.innerWidth / 2) * (offsetXPercent / 100);
-    const yOffset = (window.innerHeight / 2) * (offsetYPercent / 100);
-
-    const x = window.innerWidth / 2 + xOffset;
-    const y = window.innerHeight / 2 + yOffset;
-    return { x, y };
-  };
-
-  const mobilePositions = [
-    { x: -110, y: -30}, // 모바일용 팝업1 초기 위치
-    { x: -75, y: -90 }, // 모바일용 팝업2 초기 위치
-    { x: -40, y: -90 }, // 모바일용 팝업2 초기 위치
-  ];
-
-  const desktopPositions = [
-    { x: -60, y: -60 }, // 데스크탑용 팝업1 초기 위치
-    { x: -25, y: -70 }, // 데스크탑용 팝업2 초기 위치
-    { x: 10, y: -60 }, // 데스크탑용 팝업2 초기 위치
-  ];
 
   const isMobile = window.innerWidth <= 1024;
-  const initialPositions = isMobile ? mobilePositions : desktopPositions;
-  const pos1 = getCenterPosition({ offsetXPercent: initialPositions[0].x, offsetYPercent: initialPositions[0].y });
-  const pos2 = getCenterPosition2({ offsetXPercent: initialPositions[1].x, offsetYPercent: initialPositions[1].y });
-  const pos3 = getCenterPosition3({ offsetXPercent: initialPositions[2].x, offsetYPercent: initialPositions[2].y });
-  const imageurl2 = !isMobile ? "/images/popup/popup5.webp" : "/images/popup/mobile/popup5.webp";
-  const imageurl3 = !isMobile ? "/images/popup/popup3.webp": "/images/popup/mobile/popup3.webp";
   
   const imageurl1 = "/images/popup/e.webp";
   const imageurl4 = "/images/popup/a.webp";
@@ -239,6 +187,9 @@ const App = () => {
           </div>
           </>
       )}
+      <div style={{ padding: "40px" }}>
+      <YouTubeEmbed/>
+    </div>
       {/* 진료과목소개 */}
       <div id="section2" className="section">
         <Seciont2></Seciont2>

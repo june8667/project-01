@@ -27,15 +27,18 @@ const ImageSlider = () => {
 
   const images = [
     {
-      src: "/images/slides/main02.webp",
+      src: "/images/slides/main04.webp",
+    },
+    {
+     src: "/images/slides/main04.webp",
       text: "건강보험공단 지정 5대암 검진기관",
     },
     {
-      src: "/images/slides/main03.webp",
+     src: "/images/slides/main04.webp",
       text: "소화기내과 세부 전문의 진료 시스템",
     },
     {
-      src: "/images/slides/main01.webp",
+     src: "/images/slides/main04.webp",
       text: "대학병원급 장비 및 맞춤형 관리 시스템",
     },
   ];
@@ -57,31 +60,39 @@ const ImageSlider = () => {
       >
         {images.map((item, index) => (
           <SwiperSlide
-            key={index}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <img
-              src={item.src}
-              alt={`slide-${index}`}
-              className="slideImg"
-            />
-            <div className="text-overlay">
-              <div className="text-position">
-                <p className="text-main-1">
-                  나은 사람들이 나은마음으로 진료합니다
-                </p>
-                <p className="text-main-2">
-                  SAMSUNG NAEUN
-                  <br />
-                  INTERNAL MEDICINE
-                </p>
-                <p className={`text-fix ${isReady ? 'show' : ''}`}>{item.text}</p>
-              </div>
-            </div>
-          </SwiperSlide>
+    key={index}
+    style={{
+      display: "flex",
+      justifyContent: "center",
+    }}
+  >
+    <img
+      src={item.src}
+      alt={`slide-${index}`}
+      className="slideImg"
+    />
+
+    {/* 첫 번째 슬라이드가 아닐 때만 텍스트 렌더링 */}
+    {index !== 0 && (
+      <div className="text-overlay">
+        <div className="text-position">
+          <p className="text-main-1">
+            나은 사람들이 나은마음으로 진료합니다
+          </p>
+          <p className="text-main-2">
+            SAMSUNG NAEUN
+            <br />
+            INTERNAL MEDICINE
+          </p>
+          {item.text && (
+            <p className={`text-fix ${isReady ? 'show' : ''}`}>
+              {item.text}
+            </p>
+          )}
+        </div>
+      </div>
+    )}
+  </SwiperSlide>
         ))}
       </Swiper>
       {/* 페이지네이션 점을 표시할 컨테이너 */}

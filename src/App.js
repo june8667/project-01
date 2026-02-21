@@ -58,7 +58,7 @@ const App = () => {
         <>
         <div>
           <PopupGroup
-            images={[imageurl1, imageurl4, imageurl5, imageurl6, imageurl7]}
+            images={[imageurl1, imageurl4, imageurl6]}
             width={360 * ratio}
             height={500 * ratio}
             gap={20}
@@ -147,7 +147,7 @@ const App = () => {
               }}
             />
           </div>
-          <div
+          {/* <div
             style={{
               width: "100%",
               border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
@@ -165,8 +165,8 @@ const App = () => {
                 display: "block",
               }}
             />
-          </div>
-           <div
+          </div> */}
+           {/* <div
             style={{
               width: "100%",
               border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
@@ -184,7 +184,7 @@ const App = () => {
                 display: "block",
               }}
             />
-          </div>
+          </div> */}
           </>
       )}
       <div style={{ padding: "40px" }}>

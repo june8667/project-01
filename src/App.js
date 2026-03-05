@@ -47,6 +47,7 @@ const App = () => {
   const imageurl5 = "/images/popup/b.webp";
   const imageurl6 = "/images/popup/c.webp";
   const imageurl7 = "/images/popup/d.webp";
+  const imageurl8 = "/images/popup/e.png";
 
   return (
     <div className="total">
@@ -58,7 +59,7 @@ const App = () => {
         <>
         <div>
           <PopupGroup
-            images={[imageurl1, imageurl4, imageurl6]}
+            images={[imageurl8, imageurl1, imageurl4]}
             width={360 * ratio}
             height={500 * ratio}
             gap={20}
@@ -88,7 +89,7 @@ const App = () => {
       </div>
       {isMobile && (
         <>
-      <div
+          <div
             style={{
               width: "100%",
               height: "100%",
@@ -98,32 +99,12 @@ const App = () => {
             }}
           >
             <img
-              src={imageurl4}
+              src={imageurl8}
               alt=""
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-              }}
-            />
-          </div>
-      <div
-            style={{
-              width: "100%",
-              height: "100%",
-              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
-              overflow: "hidden",
-              boxSizing: "border-box"
-            }}
-          >
-            <img
-              src={imageurl6}
-              alt=""
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
               }}
             />
           </div>
@@ -138,6 +119,25 @@ const App = () => {
           >
             <img
               src={imageurl1}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box"
+            }}
+          >
+            <img
+              src={imageurl4}
               alt=""
               style={{
                 width: "100%",

@@ -26,7 +26,7 @@ const Section11 = () => {
       {isOpen && (
         <div style={styles.overlay} onClick={() => setIsOpen(false)}>
           <div className={styles12["modal"]} onClick={(e) => e.stopPropagation()}>
-            <img src="/images/nosupport.jpg" alt="Example" style={{ width : "100%", borderRadius: "10px" }} />
+            <img src="/images/nosupport.png" alt="Example" style={{ width : "100%", borderRadius: "10px" }} />
           </div>
         </div>
       )}

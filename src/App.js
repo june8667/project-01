@@ -44,7 +44,7 @@ const App = () => {
   
   const imageurl1 = "/images/popup/e.webp";
   const imageurl4 = "/images/popup/a.webp";
-  const imageurl5 = "/images/popup/b.webp";
+  const imageurl5 = "/images/popup/b.png";
   const imageurl6 = "/images/popup/c.webp";
   const imageurl7 = "/images/popup/d.webp";
   const imageurl8 = "/images/popup/e.png";
@@ -59,7 +59,7 @@ const App = () => {
         <>
         <div>
           <PopupGroup
-            images={[imageurl8, imageurl1, imageurl4]}
+            images={[imageurl5, imageurl8, imageurl1, imageurl4]}
             width={360 * ratio}
             height={500 * ratio}
             gap={20}
@@ -89,6 +89,25 @@ const App = () => {
       </div>
       {isMobile && (
         <>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
+              overflow: "hidden",
+              boxSizing: "border-box"
+            }}
+          >
+            <img
+              src={imageurl5}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
           <div
             style={{
               width: "100%",

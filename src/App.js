@@ -43,12 +43,8 @@ const App = () => {
   const isMobile = window.innerWidth <= 1024;
   
   const imageurl1 = "/images/popup/e.webp";
-  const imageurl4 = "/images/popup/a.webp";
-  const imageurl5 = "/images/popup/b.png";
-  const imageurl6 = "/images/popup/c.webp";
-  const imageurl7 = "/images/popup/d.webp";
+  const imageurl7 = "/images/popup/d.png";
   const imageurl8 = "/images/popup/e.png";
-  const imageurl9 = "/images/popup/f.jpg";
 
   return (
     <div className="total">
@@ -60,7 +56,7 @@ const App = () => {
         <>
         <div>
           <PopupGroup
-            images={[imageurl9, imageurl8, imageurl1, imageurl4]}
+            images={[imageurl8, imageurl7, imageurl1]}
             width={360 * ratio}
             height={500 * ratio}
             gap={20}
@@ -100,7 +96,7 @@ const App = () => {
             }}
           >
             <img
-              src={imageurl9}
+              src={imageurl7}
               alt=""
               style={{
                 width: "100%",
@@ -109,7 +105,7 @@ const App = () => {
               }}
             />
           </div>
-         <div
+          <div
             style={{
               width: "100%",
               height: "100%",
@@ -128,6 +124,7 @@ const App = () => {
               }}
             />
           </div>
+
           <div
             style={{
               width: "100%",
@@ -144,26 +141,6 @@ const App = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-              }}
-            />
-          </div>
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              border: "4px solid #7ecbff",   // ⭐ 하늘색 + 두꺼운 선
-              overflow: "hidden",
-              boxSizing: "border-box"
-            }}
-          >
-            <img
-              src={imageurl4}
-              alt=""
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
               }}
             />
           </div>

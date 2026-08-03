@@ -43,7 +43,7 @@ const App = () => {
   const isMobile = window.innerWidth <= 1024;
   
   const imageurl1 = "/images/popup/e.webp";
-  const imageurl7 = "/images/popup/d.png";
+  const imageurl7 = "/images/popup/d.jpg";
   const imageurl8 = "/images/popup/e.png";
   const imageurl2 = "/images/popup/x.jpg";
 

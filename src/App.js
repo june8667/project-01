@@ -17,6 +17,7 @@ import Interior from "./Sections/Interior.js";
 import PopupGroup from './Popup/PopupGroup.js';
 import Adress from "./address.js";
 import FloatingButton from "./FloatingButton.js";
+import BookingCta from "./Sections/BookingCta.js";
 import KakaoMap from "./kakaomap.js";
 import Popup from "./popup.js";
 import YouTubeEmbed from './Popup/YouTubeEmbed.js';
@@ -86,6 +87,7 @@ const App = () => {
       <div id="section1" className="section">
         <Seciont1></Seciont1>
       </div>
+      <BookingCta />
       {isMobile && (
         <>
           <div
